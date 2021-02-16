@@ -1,0 +1,10 @@
+
+minimo-s:     formato del fichero elf64-x86-64
+
+
+Desensamblado de la sección .text:
+
+0000000000401000 <_start>:
+  401000:	b8 01 00 00 00       	mov    $0x1,%eax
+  401005:	31 db                	xor    %ebx,%ebx
+  401007:	cd 80                	int    $0x80

@@ -1,0 +1,98 @@
+###################################
+# long long suma(int *lista, int n)
+#   edx:eax             rdi    esi
+###################################
+suma:
+        xor %ecx, %ecx
+        xor %r8d, %r8d
+        xor %r9d, %r9d
+.Lfor:
+        mov (%rdi,%rcx,4), %eax
+        cltd # eax --> edx:eax
+        add %eax, %r8d # suma partes bajas
+        adc %edx, %r9d # suma acarreo
+        inc %rcx
+        cmp %rcx,%rsi
+        jne .Lfor
+        mov %r8d, %eax
+        mov %r9d, %edx
+        ret
+        
+        -----------------------------------------------------------
+        
+suma:
+        xor %eax, %eax
+        xor %ecx, %ecx
+        xor %edx, %edx
+.Lfor:
+        mov (%rdi,%rcx,4), %r8d
+#       cltd # eax --> edx:eax
+        mov %r8d, %r9d # cltd
+        sar $31, %r9d  # cltd
+        add %r8d, %eax # suma partes bajas
+        adc %r9d, %edx # suma acarreo
+        inc %rcx
+        cmp %rcx,%rsi
+        jne .Lfor
+#       mov %r8d, %eax
+#       mov %r9d, %edx
+        ret
+suma:
+        xor %eax, %eax
+        xor %ecx, %ecx
+.Lfor:
+        movslq (%rdi,%rcx,4), %r8
+        add %r8, %rax # suma partes bajas y altas
+        inc %rcx
+        cmp %rcx,%rsi
+        jne .Lfor
+        mov %rax, %rdx # parte alta de rax --> edx
+        shr $32, %rdx  # parte alta de rax --> edx 
+        ret
+        
+  ------------------------------------
+  
+  
+  ##############################
+# int media(int *lista, int n)
+# eax              rdi    esi
+##############################
+media:
+	push %rsi
+	call suma # edx:eax
+	idiv %esi # edx:eax/esi --> cociente: eax, resto: edx
+	pop %rsi
+	ret
+##############################
+# int resto(int *lista, int n)
+# eax              rdi    esi
+##############################
+resto:
+        push %rsi
+        call suma # edx:eax
+        idiv %esi # edx:eax/esi --> cociente: eax, resto: edx
+	mov %edx, %eax
+        pop %rsi
+        ret
+  formato2:	.string "media = %i = 0x%08x\n"
+  formato3:	.string "resto = %i = 0x%08x\n"
+mov $lista, %rdi
+	mov longlista, %esi
+	call media
+
+	mov $formato2, %rdi
+	mov %eax, %esi
+	mov %eax, %edx
+	xor %eax, %eax
+	call printf
+	mov $lista, %rdi
+        mov longlista, %esi
+        call resto
+
+        mov $formato3, %rdi
+        mov %eax, %esi
+        mov %eax, %edx
+        xor %eax, %eax
+        call printf
+        
+        -------------------------------------------

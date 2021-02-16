@@ -1,0 +1,1872 @@
+
+popcount-v:     formato del fichero elf64-x86-64
+
+
+Desensamblado de la sección .init:
+
+0000000000400978 <_init>:
+  400978:	48 83 ec 08          	sub    $0x8,%rsp
+  40097c:	48 8b 05 75 26 20 00 	mov    0x202675(%rip),%rax        # 602ff8 <__gmon_start__>
+  400983:	48 85 c0             	test   %rax,%rax
+  400986:	74 02                	je     40098a <_init+0x12>
+  400988:	ff d0                	callq  *%rax
+  40098a:	48 83 c4 08          	add    $0x8,%rsp
+  40098e:	c3                   	retq   
+
+Desensamblado de la sección .plt:
+
+0000000000400990 <.plt>:
+  400990:	ff 35 72 26 20 00    	pushq  0x202672(%rip)        # 603008 <_GLOBAL_OFFSET_TABLE_+0x8>
+  400996:	ff 25 74 26 20 00    	jmpq   *0x202674(%rip)        # 603010 <_GLOBAL_OFFSET_TABLE_+0x10>
+  40099c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000004009a0 <std::ostream::put(char)@plt>:
+  4009a0:	ff 25 72 26 20 00    	jmpq   *0x202672(%rip)        # 603018 <std::ostream::put(char)@GLIBCXX_3.4>
+  4009a6:	68 00 00 00 00       	pushq  $0x0
+  4009ab:	e9 e0 ff ff ff       	jmpq   400990 <.plt>
+
+00000000004009b0 <std::chrono::_V2::system_clock::now()@plt>:
+  4009b0:	ff 25 6a 26 20 00    	jmpq   *0x20266a(%rip)        # 603020 <std::chrono::_V2::system_clock::now()@GLIBCXX_3.4.19>
+  4009b6:	68 01 00 00 00       	pushq  $0x1
+  4009bb:	e9 d0 ff ff ff       	jmpq   400990 <.plt>
+
+00000000004009c0 <strlen@plt>:
+  4009c0:	ff 25 62 26 20 00    	jmpq   *0x202662(%rip)        # 603028 <strlen@GLIBC_2.2.5>
+  4009c6:	68 02 00 00 00       	pushq  $0x2
+  4009cb:	e9 c0 ff ff ff       	jmpq   400990 <.plt>
+
+00000000004009d0 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@plt>:
+  4009d0:	ff 25 5a 26 20 00    	jmpq   *0x20265a(%rip)        # 603030 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+  4009d6:	68 03 00 00 00       	pushq  $0x3
+  4009db:	e9 b0 ff ff ff       	jmpq   400990 <.plt>
+
+00000000004009e0 <std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)@plt>:
+  4009e0:	ff 25 52 26 20 00    	jmpq   *0x202652(%rip)        # 603038 <std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)@GLIBCXX_3.4.9>
+  4009e6:	68 04 00 00 00       	pushq  $0x4
+  4009eb:	e9 a0 ff ff ff       	jmpq   400990 <.plt>
+
+00000000004009f0 <std::ostream::flush()@plt>:
+  4009f0:	ff 25 4a 26 20 00    	jmpq   *0x20264a(%rip)        # 603040 <std::ostream::flush()@GLIBCXX_3.4>
+  4009f6:	68 05 00 00 00       	pushq  $0x5
+  4009fb:	e9 90 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a00 <__cxa_atexit@plt>:
+  400a00:	ff 25 42 26 20 00    	jmpq   *0x202642(%rip)        # 603048 <__cxa_atexit@GLIBC_2.2.5>
+  400a06:	68 06 00 00 00       	pushq  $0x6
+  400a0b:	e9 80 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a10 <__stack_chk_fail@plt>:
+  400a10:	ff 25 3a 26 20 00    	jmpq   *0x20263a(%rip)        # 603050 <__stack_chk_fail@GLIBC_2.4>
+  400a16:	68 07 00 00 00       	pushq  $0x7
+  400a1b:	e9 70 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>:
+  400a20:	ff 25 32 26 20 00    	jmpq   *0x202632(%rip)        # 603058 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@GLIBCXX_3.4.9>
+  400a26:	68 08 00 00 00       	pushq  $0x8
+  400a2b:	e9 60 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a30 <std::ctype<char>::_M_widen_init() const@plt>:
+  400a30:	ff 25 2a 26 20 00    	jmpq   *0x20262a(%rip)        # 603060 <std::ctype<char>::_M_widen_init() const@GLIBCXX_3.4.11>
+  400a36:	68 09 00 00 00       	pushq  $0x9
+  400a3b:	e9 50 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a40 <std::__throw_bad_cast()@plt>:
+  400a40:	ff 25 22 26 20 00    	jmpq   *0x202622(%rip)        # 603068 <std::__throw_bad_cast()@GLIBCXX_3.4>
+  400a46:	68 0a 00 00 00       	pushq  $0xa
+  400a4b:	e9 40 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a50 <std::ios_base::Init::Init()@plt>:
+  400a50:	ff 25 1a 26 20 00    	jmpq   *0x20261a(%rip)        # 603070 <std::ios_base::Init::Init()@GLIBCXX_3.4>
+  400a56:	68 0b 00 00 00       	pushq  $0xb
+  400a5b:	e9 30 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a60 <std::ostream& std::ostream::_M_insert<double>(double)@plt>:
+  400a60:	ff 25 12 26 20 00    	jmpq   *0x202612(%rip)        # 603078 <std::ostream& std::ostream::_M_insert<double>(double)@GLIBCXX_3.4.9>
+  400a66:	68 0c 00 00 00       	pushq  $0xc
+  400a6b:	e9 20 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a70 <std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)@plt>:
+  400a70:	ff 25 0a 26 20 00    	jmpq   *0x20260a(%rip)        # 603080 <std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)@GLIBCXX_3.4>
+  400a76:	68 0d 00 00 00       	pushq  $0xd
+  400a7b:	e9 10 ff ff ff       	jmpq   400990 <.plt>
+
+0000000000400a80 <std::ios_base::Init::~Init()@plt>:
+  400a80:	ff 25 02 26 20 00    	jmpq   *0x202602(%rip)        # 603088 <std::ios_base::Init::~Init()@GLIBCXX_3.4>
+  400a86:	68 0e 00 00 00       	pushq  $0xe
+  400a8b:	e9 00 ff ff ff       	jmpq   400990 <.plt>
+
+Desensamblado de la sección .text:
+
+0000000000400a90 <main>:
+  400a90:	48 83 ec 08          	sub    $0x8,%rsp
+  400a94:	b9 01 00 00 00       	mov    $0x1,%ecx
+  400a99:	bf c0 32 61 00       	mov    $0x6132c0,%edi
+  400a9e:	49 b8 05 00 00 00 02 	movabs $0x200000005,%r8
+  400aa5:	00 00 00 
+  400aa8:	49 ba 97 00 00 00 0f 	movabs $0x8000000f00000097,%r10
+  400aaf:	00 00 80 
+  400ab2:	41 b9 ff ff ff ff    	mov    $0xffffffff,%r9d
+  400ab8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  400abf:	00 
+  400ac0:	48 69 f1 a7 41 00 00 	imul   $0x41a7,%rcx,%rsi
+  400ac7:	48 89 f0             	mov    %rsi,%rax
+  400aca:	48 89 f1             	mov    %rsi,%rcx
+  400acd:	49 f7 e0             	mul    %r8
+  400ad0:	48 29 d1             	sub    %rdx,%rcx
+  400ad3:	48 d1 e9             	shr    %rcx
+  400ad6:	48 01 ca             	add    %rcx,%rdx
+  400ad9:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  400add:	48 89 d0             	mov    %rdx,%rax
+  400ae0:	48 c1 e0 1f          	shl    $0x1f,%rax
+  400ae4:	48 29 d0             	sub    %rdx,%rax
+  400ae7:	48 29 c6             	sub    %rax,%rsi
+  400aea:	48 89 f1             	mov    %rsi,%rcx
+  400aed:	48 8d 76 ff          	lea    -0x1(%rsi),%rsi
+  400af1:	48 81 fe fa ff ff 7f 	cmp    $0x7ffffffa,%rsi
+  400af8:	77 c6                	ja     400ac0 <main+0x30>
+  400afa:	48 89 f0             	mov    %rsi,%rax
+  400afd:	4c 69 d9 a7 41 00 00 	imul   $0x41a7,%rcx,%r11
+  400b04:	49 f7 e2             	mul    %r10
+  400b07:	4c 89 d9             	mov    %r11,%rcx
+  400b0a:	48 29 d6             	sub    %rdx,%rsi
+  400b0d:	48 d1 ee             	shr    %rsi
+  400b10:	48 01 d6             	add    %rdx,%rsi
+  400b13:	48 c1 ee 1d          	shr    $0x1d,%rsi
+  400b17:	48 89 f0             	mov    %rsi,%rax
+  400b1a:	48 c1 e0 1e          	shl    $0x1e,%rax
+  400b1e:	48 29 f0             	sub    %rsi,%rax
+  400b21:	48 89 c6             	mov    %rax,%rsi
+  400b24:	4c 89 d8             	mov    %r11,%rax
+  400b27:	49 f7 e0             	mul    %r8
+  400b2a:	48 01 f6             	add    %rsi,%rsi
+  400b2d:	48 29 d1             	sub    %rdx,%rcx
+  400b30:	48 d1 e9             	shr    %rcx
+  400b33:	48 01 ca             	add    %rcx,%rdx
+  400b36:	4c 89 d9             	mov    %r11,%rcx
+  400b39:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  400b3d:	48 89 d0             	mov    %rdx,%rax
+  400b40:	48 c1 e0 1f          	shl    $0x1f,%rax
+  400b44:	48 29 d0             	sub    %rdx,%rax
+  400b47:	48 29 c1             	sub    %rax,%rcx
+  400b4a:	48 8d 44 31 ff       	lea    -0x1(%rcx,%rsi,1),%rax
+  400b4f:	4c 39 c8             	cmp    %r9,%rax
+  400b52:	0f 87 68 ff ff ff    	ja     400ac0 <main+0x30>
+  400b58:	48 39 c6             	cmp    %rax,%rsi
+  400b5b:	0f 87 5f ff ff ff    	ja     400ac0 <main+0x30>
+  400b61:	89 07                	mov    %eax,(%rdi)
+  400b63:	48 83 c7 04          	add    $0x4,%rdi
+  400b67:	48 81 ff c0 32 65 00 	cmp    $0x6532c0,%rdi
+  400b6e:	0f 85 4c ff ff ff    	jne    400ac0 <main+0x30>
+  400b74:	b8 01 00 00 00       	mov    $0x1,%eax
+  400b79:	31 d2                	xor    %edx,%edx
+  400b7b:	eb 07                	jmp    400b84 <main+0xf4>
+  400b7d:	0f 1f 00             	nopl   (%rax)
+  400b80:	f3 0f b8 d2          	popcnt %edx,%edx
+  400b84:	88 90 bf 31 61 00    	mov    %dl,0x6131bf(%rax)
+  400b8a:	89 c2                	mov    %eax,%edx
+  400b8c:	48 ff c0             	inc    %rax
+  400b8f:	48 3d 01 01 00 00    	cmp    $0x101,%rax
+  400b95:	75 e9                	jne    400b80 <main+0xf0>
+  400b97:	b8 01 00 00 00       	mov    $0x1,%eax
+  400b9c:	31 d2                	xor    %edx,%edx
+  400b9e:	eb 04                	jmp    400ba4 <main+0x114>
+  400ba0:	f3 0f b8 d2          	popcnt %edx,%edx
+  400ba4:	88 90 bf 31 60 00    	mov    %dl,0x6031bf(%rax)
+  400baa:	89 c2                	mov    %eax,%edx
+  400bac:	48 ff c0             	inc    %rax
+  400baf:	48 3d 01 00 01 00    	cmp    $0x10001,%rax
+  400bb5:	75 e9                	jne    400ba0 <main+0x110>
+  400bb7:	ba 01 00 00 00       	mov    $0x1,%edx
+  400bbc:	be b4 22 40 00       	mov    $0x4022b4,%esi
+  400bc1:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400bc6:	e8 55 fe ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  400bcb:	48 8b 05 ce 24 20 00 	mov    0x2024ce(%rip),%rax        # 6030a0 <std::cout@@GLIBCXX_3.4>
+  400bd2:	ba 0a 00 00 00       	mov    $0xa,%edx
+  400bd7:	be b6 22 40 00       	mov    $0x4022b6,%esi
+  400bdc:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400be1:	48 8b 40 e8          	mov    -0x18(%rax),%rax
+  400be5:	48 c7 80 b0 30 60 00 	movq   $0x17,0x6030b0(%rax)
+  400bec:	17 00 00 00 
+  400bf0:	e8 2b fe ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  400bf5:	48 8b 05 a4 24 20 00 	mov    0x2024a4(%rip),%rax        # 6030a0 <std::cout@@GLIBCXX_3.4>
+  400bfc:	ba 05 00 00 00       	mov    $0x5,%edx
+  400c01:	be c1 22 40 00       	mov    $0x4022c1,%esi
+  400c06:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400c0b:	48 8b 40 e8          	mov    -0x18(%rax),%rax
+  400c0f:	48 c7 80 b0 30 60 00 	movq   $0xc,0x6030b0(%rax)
+  400c16:	0c 00 00 00 
+  400c1a:	e8 01 fe ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  400c1f:	48 8b 05 7a 24 20 00 	mov    0x20247a(%rip),%rax        # 6030a0 <std::cout@@GLIBCXX_3.4>
+  400c26:	ba 06 00 00 00       	mov    $0x6,%edx
+  400c2b:	be c7 22 40 00       	mov    $0x4022c7,%esi
+  400c30:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400c35:	48 8b 40 e8          	mov    -0x18(%rax),%rax
+  400c39:	48 c7 80 b0 30 60 00 	movq   $0xc,0x6030b0(%rax)
+  400c40:	0c 00 00 00 
+  400c44:	e8 d7 fd ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  400c49:	48 8b 05 50 24 20 00 	mov    0x202450(%rip),%rax        # 6030a0 <std::cout@@GLIBCXX_3.4>
+  400c50:	ba 08 00 00 00       	mov    $0x8,%edx
+  400c55:	be ce 22 40 00       	mov    $0x4022ce,%esi
+  400c5a:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400c5f:	48 8b 40 e8          	mov    -0x18(%rax),%rax
+  400c63:	48 c7 80 b0 30 60 00 	movq   $0xc,0x6030b0(%rax)
+  400c6a:	0c 00 00 00 
+  400c6e:	e8 ad fd ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  400c73:	48 8b 05 26 24 20 00 	mov    0x202426(%rip),%rax        # 6030a0 <std::cout@@GLIBCXX_3.4>
+  400c7a:	ba 09 00 00 00       	mov    $0x9,%edx
+  400c7f:	be d7 22 40 00       	mov    $0x4022d7,%esi
+  400c84:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400c89:	48 8b 40 e8          	mov    -0x18(%rax),%rax
+  400c8d:	48 c7 80 b0 30 60 00 	movq   $0xc,0x6030b0(%rax)
+  400c94:	0c 00 00 00 
+  400c98:	e8 83 fd ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  400c9d:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400ca2:	e8 29 fd ff ff       	callq  4009d0 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@plt>
+  400ca7:	be e1 22 40 00       	mov    $0x4022e1,%esi
+  400cac:	bf 10 0f 40 00       	mov    $0x400f10,%edi
+  400cb1:	e8 ea 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400cb6:	be f3 22 40 00       	mov    $0x4022f3,%esi
+  400cbb:	bf d0 0f 40 00       	mov    $0x400fd0,%edi
+  400cc0:	e8 db 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400cc5:	be 03 23 40 00       	mov    $0x402303,%esi
+  400cca:	bf d0 10 40 00       	mov    $0x4010d0,%edi
+  400ccf:	e8 cc 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400cd4:	be 15 23 40 00       	mov    $0x402315,%esi
+  400cd9:	bf 10 11 40 00       	mov    $0x401110,%edi
+  400cde:	e8 bd 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400ce3:	be 28 23 40 00       	mov    $0x402328,%esi
+  400ce8:	bf 40 11 40 00       	mov    $0x401140,%edi
+  400ced:	e8 ae 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400cf2:	be 3e 23 40 00       	mov    $0x40233e,%esi
+  400cf7:	bf 70 11 40 00       	mov    $0x401170,%edi
+  400cfc:	e8 9f 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d01:	be 55 23 40 00       	mov    $0x402355,%esi
+  400d06:	bf 40 14 40 00       	mov    $0x401440,%edi
+  400d0b:	e8 90 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d10:	be 65 23 40 00       	mov    $0x402365,%esi
+  400d15:	bf 80 16 40 00       	mov    $0x401680,%edi
+  400d1a:	e8 81 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d1f:	be 7b 23 40 00       	mov    $0x40237b,%esi
+  400d24:	bf 40 18 40 00       	mov    $0x401840,%edi
+  400d29:	e8 72 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d2e:	be 8e 23 40 00       	mov    $0x40238e,%esi
+  400d33:	bf 80 18 40 00       	mov    $0x401880,%edi
+  400d38:	e8 63 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d3d:	be 9e 23 40 00       	mov    $0x40239e,%esi
+  400d42:	bf f0 18 40 00       	mov    $0x4018f0,%edi
+  400d47:	e8 54 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d4c:	be b1 23 40 00       	mov    $0x4023b1,%esi
+  400d51:	bf 50 19 40 00       	mov    $0x401950,%edi
+  400d56:	e8 45 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d5b:	be c4 23 40 00       	mov    $0x4023c4,%esi
+  400d60:	bf a0 19 40 00       	mov    $0x4019a0,%edi
+  400d65:	e8 36 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d6a:	be d7 23 40 00       	mov    $0x4023d7,%esi
+  400d6f:	bf e0 19 40 00       	mov    $0x4019e0,%edi
+  400d74:	e8 27 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d79:	be e8 23 40 00       	mov    $0x4023e8,%esi
+  400d7e:	bf e0 1a 40 00       	mov    $0x401ae0,%edi
+  400d83:	e8 18 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d88:	be fc 23 40 00       	mov    $0x4023fc,%esi
+  400d8d:	bf 20 1b 40 00       	mov    $0x401b20,%edi
+  400d92:	e8 09 0e 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400d97:	be 0f 24 40 00       	mov    $0x40240f,%esi
+  400d9c:	bf 60 1b 40 00       	mov    $0x401b60,%edi
+  400da1:	e8 fa 0d 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400da6:	be 23 24 40 00       	mov    $0x402423,%esi
+  400dab:	bf 30 1a 40 00       	mov    $0x401a30,%edi
+  400db0:	e8 eb 0d 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400db5:	be 37 24 40 00       	mov    $0x402437,%esi
+  400dba:	bf 50 1a 40 00       	mov    $0x401a50,%edi
+  400dbf:	e8 dc 0d 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400dc4:	be 4b 24 40 00       	mov    $0x40244b,%esi
+  400dc9:	bf 80 1a 40 00       	mov    $0x401a80,%edi
+  400dce:	e8 cd 0d 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400dd3:	be 5f 24 40 00       	mov    $0x40245f,%esi
+  400dd8:	bf b0 1a 40 00       	mov    $0x401ab0,%edi
+  400ddd:	e8 be 0d 00 00       	callq  401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>
+  400de2:	31 c0                	xor    %eax,%eax
+  400de4:	48 83 c4 08          	add    $0x8,%rsp
+  400de8:	c3                   	retq   
+  400de9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000400df0 <_GLOBAL__sub_I_list>:
+  400df0:	48 83 ec 08          	sub    $0x8,%rsp
+  400df4:	bf c0 32 65 00       	mov    $0x6532c0,%edi
+  400df9:	e8 52 fc ff ff       	callq  400a50 <std::ios_base::Init::Init()@plt>
+  400dfe:	ba 98 30 60 00       	mov    $0x603098,%edx
+  400e03:	be c0 32 65 00       	mov    $0x6532c0,%esi
+  400e08:	bf 80 0a 40 00       	mov    $0x400a80,%edi
+  400e0d:	48 83 c4 08          	add    $0x8,%rsp
+  400e11:	e9 ea fb ff ff       	jmpq   400a00 <__cxa_atexit@plt>
+  400e16:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400e1d:	00 00 00 
+
+0000000000400e20 <_start>:
+  400e20:	31 ed                	xor    %ebp,%ebp
+  400e22:	49 89 d1             	mov    %rdx,%r9
+  400e25:	5e                   	pop    %rsi
+  400e26:	48 89 e2             	mov    %rsp,%rdx
+  400e29:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+  400e2d:	50                   	push   %rax
+  400e2e:	54                   	push   %rsp
+  400e2f:	49 c7 c0 a0 22 40 00 	mov    $0x4022a0,%r8
+  400e36:	48 c7 c1 30 22 40 00 	mov    $0x402230,%rcx
+  400e3d:	48 c7 c7 90 0a 40 00 	mov    $0x400a90,%rdi
+  400e44:	ff 15 a6 21 20 00    	callq  *0x2021a6(%rip)        # 602ff0 <__libc_start_main@GLIBC_2.2.5>
+  400e4a:	f4                   	hlt    
+  400e4b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000400e50 <_dl_relocate_static_pie>:
+  400e50:	f3 c3                	repz retq 
+  400e52:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400e59:	00 00 00 
+  400e5c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400e60 <deregister_tm_clones>:
+  400e60:	55                   	push   %rbp
+  400e61:	b8 a0 30 60 00       	mov    $0x6030a0,%eax
+  400e66:	48 3d a0 30 60 00    	cmp    $0x6030a0,%rax
+  400e6c:	48 89 e5             	mov    %rsp,%rbp
+  400e6f:	74 17                	je     400e88 <deregister_tm_clones+0x28>
+  400e71:	b8 00 00 00 00       	mov    $0x0,%eax
+  400e76:	48 85 c0             	test   %rax,%rax
+  400e79:	74 0d                	je     400e88 <deregister_tm_clones+0x28>
+  400e7b:	5d                   	pop    %rbp
+  400e7c:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400e81:	ff e0                	jmpq   *%rax
+  400e83:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  400e88:	5d                   	pop    %rbp
+  400e89:	c3                   	retq   
+  400e8a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000400e90 <register_tm_clones>:
+  400e90:	be a0 30 60 00       	mov    $0x6030a0,%esi
+  400e95:	55                   	push   %rbp
+  400e96:	48 81 ee a0 30 60 00 	sub    $0x6030a0,%rsi
+  400e9d:	48 89 e5             	mov    %rsp,%rbp
+  400ea0:	48 c1 fe 03          	sar    $0x3,%rsi
+  400ea4:	48 89 f0             	mov    %rsi,%rax
+  400ea7:	48 c1 e8 3f          	shr    $0x3f,%rax
+  400eab:	48 01 c6             	add    %rax,%rsi
+  400eae:	48 d1 fe             	sar    %rsi
+  400eb1:	74 15                	je     400ec8 <register_tm_clones+0x38>
+  400eb3:	b8 00 00 00 00       	mov    $0x0,%eax
+  400eb8:	48 85 c0             	test   %rax,%rax
+  400ebb:	74 0b                	je     400ec8 <register_tm_clones+0x38>
+  400ebd:	5d                   	pop    %rbp
+  400ebe:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  400ec3:	ff e0                	jmpq   *%rax
+  400ec5:	0f 1f 00             	nopl   (%rax)
+  400ec8:	5d                   	pop    %rbp
+  400ec9:	c3                   	retq   
+  400eca:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000400ed0 <__do_global_dtors_aux>:
+  400ed0:	80 3d d9 22 20 00 00 	cmpb   $0x0,0x2022d9(%rip)        # 6031b0 <completed.7696>
+  400ed7:	75 17                	jne    400ef0 <__do_global_dtors_aux+0x20>
+  400ed9:	55                   	push   %rbp
+  400eda:	48 89 e5             	mov    %rsp,%rbp
+  400edd:	e8 7e ff ff ff       	callq  400e60 <deregister_tm_clones>
+  400ee2:	c6 05 c7 22 20 00 01 	movb   $0x1,0x2022c7(%rip)        # 6031b0 <completed.7696>
+  400ee9:	5d                   	pop    %rbp
+  400eea:	c3                   	retq   
+  400eeb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  400ef0:	f3 c3                	repz retq 
+  400ef2:	0f 1f 40 00          	nopl   0x0(%rax)
+  400ef6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400efd:	00 00 00 
+
+0000000000400f00 <frame_dummy>:
+  400f00:	55                   	push   %rbp
+  400f01:	48 89 e5             	mov    %rsp,%rbp
+  400f04:	5d                   	pop    %rbp
+  400f05:	eb 89                	jmp    400e90 <register_tm_clones>
+  400f07:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  400f0e:	00 00 
+
+0000000000400f10 <popcount00(unsigned int*, unsigned int*)>:
+  400f10:	48 39 f7             	cmp    %rsi,%rdi
+  400f13:	0f 84 97 00 00 00    	je     400fb0 <popcount00(unsigned int*, unsigned int*)+0xa0>
+  400f19:	48 8d 57 04          	lea    0x4(%rdi),%rdx
+  400f1d:	48 89 f0             	mov    %rsi,%rax
+  400f20:	48 29 d0             	sub    %rdx,%rax
+  400f23:	49 89 c0             	mov    %rax,%r8
+  400f26:	49 c1 e8 02          	shr    $0x2,%r8
+  400f2a:	49 ff c0             	inc    %r8
+  400f2d:	48 83 f8 0c          	cmp    $0xc,%rax
+  400f31:	0f 86 89 00 00 00    	jbe    400fc0 <popcount00(unsigned int*, unsigned int*)+0xb0>
+  400f37:	4c 89 c1             	mov    %r8,%rcx
+  400f3a:	48 89 fa             	mov    %rdi,%rdx
+  400f3d:	31 c0                	xor    %eax,%eax
+  400f3f:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+  400f43:	48 c1 e9 02          	shr    $0x2,%rcx
+  400f47:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  400f4e:	00 00 
+  400f50:	48 ff c0             	inc    %rax
+  400f53:	c5 f9 fe 02          	vpaddd (%rdx),%xmm0,%xmm0
+  400f57:	48 83 c2 10          	add    $0x10,%rdx
+  400f5b:	48 39 c8             	cmp    %rcx,%rax
+  400f5e:	72 f0                	jb     400f50 <popcount00(unsigned int*, unsigned int*)+0x40>
+  400f60:	c5 f1 73 d8 08       	vpsrldq $0x8,%xmm0,%xmm1
+  400f65:	4c 89 c2             	mov    %r8,%rdx
+  400f68:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+  400f6c:	c5 f1 73 d8 04       	vpsrldq $0x4,%xmm0,%xmm1
+  400f71:	48 83 e2 fc          	and    $0xfffffffffffffffc,%rdx
+  400f75:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+  400f79:	c5 f9 7e c0          	vmovd  %xmm0,%eax
+  400f7d:	48 8d 3c 97          	lea    (%rdi,%rdx,4),%rdi
+  400f81:	49 39 d0             	cmp    %rdx,%r8
+  400f84:	74 2c                	je     400fb2 <popcount00(unsigned int*, unsigned int*)+0xa2>
+  400f86:	48 8d 57 04          	lea    0x4(%rdi),%rdx
+  400f8a:	03 07                	add    (%rdi),%eax
+  400f8c:	48 39 d6             	cmp    %rdx,%rsi
+  400f8f:	74 21                	je     400fb2 <popcount00(unsigned int*, unsigned int*)+0xa2>
+  400f91:	48 8d 57 08          	lea    0x8(%rdi),%rdx
+  400f95:	03 47 04             	add    0x4(%rdi),%eax
+  400f98:	48 39 d6             	cmp    %rdx,%rsi
+  400f9b:	74 15                	je     400fb2 <popcount00(unsigned int*, unsigned int*)+0xa2>
+  400f9d:	48 8d 57 0c          	lea    0xc(%rdi),%rdx
+  400fa1:	03 47 08             	add    0x8(%rdi),%eax
+  400fa4:	48 39 d6             	cmp    %rdx,%rsi
+  400fa7:	74 09                	je     400fb2 <popcount00(unsigned int*, unsigned int*)+0xa2>
+  400fa9:	03 47 0c             	add    0xc(%rdi),%eax
+  400fac:	c3                   	retq   
+  400fad:	0f 1f 00             	nopl   (%rax)
+  400fb0:	31 c0                	xor    %eax,%eax
+  400fb2:	c3                   	retq   
+  400fb3:	0f 1f 00             	nopl   (%rax)
+  400fb6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400fbd:	00 00 00 
+  400fc0:	31 c0                	xor    %eax,%eax
+  400fc2:	eb c6                	jmp    400f8a <popcount00(unsigned int*, unsigned int*)+0x7a>
+  400fc4:	66 90                	xchg   %ax,%ax
+  400fc6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400fcd:	00 00 00 
+
+0000000000400fd0 <popcount01(unsigned int*, unsigned int*)>:
+  400fd0:	48 39 f7             	cmp    %rsi,%rdi
+  400fd3:	0f 84 e8 00 00 00    	je     4010c1 <popcount01(unsigned int*, unsigned int*)+0xf1>
+  400fd9:	4c 8d 4f 04          	lea    0x4(%rdi),%r9
+  400fdd:	48 89 f0             	mov    %rsi,%rax
+  400fe0:	4c 29 c8             	sub    %r9,%rax
+  400fe3:	49 89 c2             	mov    %rax,%r10
+  400fe6:	49 c1 ea 02          	shr    $0x2,%r10
+  400fea:	49 ff c2             	inc    %r10
+  400fed:	48 83 f8 08          	cmp    $0x8,%rax
+  400ff1:	0f 86 cd 00 00 00    	jbe    4010c4 <popcount01(unsigned int*, unsigned int*)+0xf4>
+  400ff7:	c5 f8 28 1d 81 14 00 	vmovaps 0x1481(%rip),%xmm3        # 402480 <_IO_stdin_used+0x1d0>
+  400ffe:	00 
+  400fff:	4d 89 d0             	mov    %r10,%r8
+  401002:	c5 f0 57 c9          	vxorps %xmm1,%xmm1,%xmm1
+  401006:	48 89 f9             	mov    %rdi,%rcx
+  401009:	49 c1 e8 02          	shr    $0x2,%r8
+  40100d:	31 d2                	xor    %edx,%edx
+  40100f:	c5 f8 28 f1          	vmovaps %xmm1,%xmm6
+  401013:	c5 d1 76 ed          	vpcmpeqd %xmm5,%xmm5,%xmm5
+  401017:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40101e:	00 00 
+  401020:	c5 f8 10 21          	vmovups (%rcx),%xmm4
+  401024:	c5 e8 57 d2          	vxorps %xmm2,%xmm2,%xmm2
+  401028:	b8 20 00 00 00       	mov    $0x20,%eax
+  40102d:	0f 1f 00             	nopl   (%rax)
+  401030:	c4 e2 61 47 c2       	vpsllvd %xmm2,%xmm3,%xmm0
+  401035:	c5 f8 54 c4          	vandps %xmm4,%xmm0,%xmm0
+  401039:	ff c8                	dec    %eax
+  40103b:	c5 e9 fe d3          	vpaddd %xmm3,%xmm2,%xmm2
+  40103f:	c5 f9 76 c6          	vpcmpeqd %xmm6,%xmm0,%xmm0
+  401043:	c5 f8 55 c5          	vandnps %xmm5,%xmm0,%xmm0
+  401047:	c5 f1 fa c8          	vpsubd %xmm0,%xmm1,%xmm1
+  40104b:	75 e3                	jne    401030 <popcount01(unsigned int*, unsigned int*)+0x60>
+  40104d:	48 ff c2             	inc    %rdx
+  401050:	48 83 c1 10          	add    $0x10,%rcx
+  401054:	4c 39 c2             	cmp    %r8,%rdx
+  401057:	72 c7                	jb     401020 <popcount01(unsigned int*, unsigned int*)+0x50>
+  401059:	c5 f9 73 d9 08       	vpsrldq $0x8,%xmm1,%xmm0
+  40105e:	4c 89 d2             	mov    %r10,%rdx
+  401061:	c5 f1 fe c8          	vpaddd %xmm0,%xmm1,%xmm1
+  401065:	c5 f9 73 d9 04       	vpsrldq $0x4,%xmm1,%xmm0
+  40106a:	48 83 e2 fc          	and    $0xfffffffffffffffc,%rdx
+  40106e:	c5 f1 fe c8          	vpaddd %xmm0,%xmm1,%xmm1
+  401072:	c5 f9 7e c8          	vmovd  %xmm1,%eax
+  401076:	48 8d 3c 97          	lea    (%rdi,%rdx,4),%rdi
+  40107a:	49 39 d2             	cmp    %rdx,%r10
+  40107d:	74 44                	je     4010c3 <popcount01(unsigned int*, unsigned int*)+0xf3>
+  40107f:	4c 8d 4f 04          	lea    0x4(%rdi),%r9
+  401083:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+  401089:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+  401090:	41 8b 79 fc          	mov    -0x4(%r9),%edi
+  401094:	31 d2                	xor    %edx,%edx
+  401096:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40109d:	00 00 00 
+  4010a0:	c4 c2 69 f7 c8       	shlx   %edx,%r8d,%ecx
+  4010a5:	85 f9                	test   %edi,%ecx
+  4010a7:	0f 95 c1             	setne  %cl
+  4010aa:	ff c2                	inc    %edx
+  4010ac:	0f b6 c9             	movzbl %cl,%ecx
+  4010af:	01 c8                	add    %ecx,%eax
+  4010b1:	83 fa 20             	cmp    $0x20,%edx
+  4010b4:	75 ea                	jne    4010a0 <popcount01(unsigned int*, unsigned int*)+0xd0>
+  4010b6:	4c 39 ce             	cmp    %r9,%rsi
+  4010b9:	74 08                	je     4010c3 <popcount01(unsigned int*, unsigned int*)+0xf3>
+  4010bb:	49 83 c1 04          	add    $0x4,%r9
+  4010bf:	eb cf                	jmp    401090 <popcount01(unsigned int*, unsigned int*)+0xc0>
+  4010c1:	31 c0                	xor    %eax,%eax
+  4010c3:	c3                   	retq   
+  4010c4:	31 c0                	xor    %eax,%eax
+  4010c6:	eb bb                	jmp    401083 <popcount01(unsigned int*, unsigned int*)+0xb3>
+  4010c8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  4010cf:	00 
+
+00000000004010d0 <popcount02(unsigned int*, unsigned int*)>:
+  4010d0:	31 c0                	xor    %eax,%eax
+  4010d2:	48 39 f7             	cmp    %rsi,%rdi
+  4010d5:	74 29                	je     401100 <popcount02(unsigned int*, unsigned int*)+0x30>
+  4010d7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  4010de:	00 00 
+  4010e0:	48 83 c7 04          	add    $0x4,%rdi
+  4010e4:	8b 57 fc             	mov    -0x4(%rdi),%edx
+  4010e7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  4010ee:	00 00 
+  4010f0:	89 d1                	mov    %edx,%ecx
+  4010f2:	83 e1 01             	and    $0x1,%ecx
+  4010f5:	01 c8                	add    %ecx,%eax
+  4010f7:	d1 ea                	shr    %edx
+  4010f9:	75 f5                	jne    4010f0 <popcount02(unsigned int*, unsigned int*)+0x20>
+  4010fb:	48 39 fe             	cmp    %rdi,%rsi
+  4010fe:	75 e0                	jne    4010e0 <popcount02(unsigned int*, unsigned int*)+0x10>
+  401100:	c3                   	retq   
+  401101:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401106:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40110d:	00 00 00 
+
+0000000000401110 <popcount03(unsigned int*, unsigned int*)>:
+  401110:	31 c0                	xor    %eax,%eax
+  401112:	48 39 f7             	cmp    %rsi,%rdi
+  401115:	74 27                	je     40113e <popcount03(unsigned int*, unsigned int*)+0x2e>
+  401117:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40111e:	00 00 
+  401120:	48 83 c7 04          	add    $0x4,%rdi
+  401124:	8b 4f fc             	mov    -0x4(%rdi),%ecx
+  401127:	ba 20 00 00 00       	mov    $0x20,%edx
+  40112c:	0f 1f 40 00          	nopl   0x0(%rax)
+  401130:	d1 e9                	shr    %ecx
+  401132:	83 d0 00             	adc    $0x0,%eax
+  401135:	ff ca                	dec    %edx
+  401137:	75 f7                	jne    401130 <popcount03(unsigned int*, unsigned int*)+0x20>
+  401139:	48 39 fe             	cmp    %rdi,%rsi
+  40113c:	75 e2                	jne    401120 <popcount03(unsigned int*, unsigned int*)+0x10>
+  40113e:	c3                   	retq   
+  40113f:	90                   	nop
+
+0000000000401140 <popcount04(unsigned int*, unsigned int*)>:
+  401140:	31 c0                	xor    %eax,%eax
+  401142:	48 39 f7             	cmp    %rsi,%rdi
+  401145:	74 28                	je     40116f <popcount04(unsigned int*, unsigned int*)+0x2f>
+  401147:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40114e:	00 00 
+  401150:	48 83 c7 04          	add    $0x4,%rdi
+  401154:	8b 57 fc             	mov    -0x4(%rdi),%edx
+  401157:	85 d2                	test   %edx,%edx
+  401159:	74 0e                	je     401169 <popcount04(unsigned int*, unsigned int*)+0x29>
+  40115b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401160:	d1 ea                	shr    %edx
+  401162:	83 d0 00             	adc    $0x0,%eax
+  401165:	85 d2                	test   %edx,%edx
+  401167:	75 f7                	jne    401160 <popcount04(unsigned int*, unsigned int*)+0x20>
+  401169:	48 39 fe             	cmp    %rdi,%rsi
+  40116c:	75 e2                	jne    401150 <popcount04(unsigned int*, unsigned int*)+0x10>
+  40116e:	c3                   	retq   
+  40116f:	c3                   	retq   
+
+0000000000401170 <popcount05(unsigned int*, unsigned int*)>:
+  401170:	48 39 f7             	cmp    %rsi,%rdi
+  401173:	0f 84 a7 02 00 00    	je     401420 <popcount05(unsigned int*, unsigned int*)+0x2b0>
+  401179:	4c 8d 4f 04          	lea    0x4(%rdi),%r9
+  40117d:	48 89 f0             	mov    %rsi,%rax
+  401180:	4c 29 c8             	sub    %r9,%rax
+  401183:	49 89 c0             	mov    %rax,%r8
+  401186:	49 c1 e8 02          	shr    $0x2,%r8
+  40118a:	49 ff c0             	inc    %r8
+  40118d:	48 83 f8 08          	cmp    $0x8,%rax
+  401191:	0f 86 99 02 00 00    	jbe    401430 <popcount05(unsigned int*, unsigned int*)+0x2c0>
+  401197:	c5 f8 28 15 f1 12 00 	vmovaps 0x12f1(%rip),%xmm2        # 402490 <_IO_stdin_used+0x1e0>
+  40119e:	00 
+  40119f:	c5 f8 28 25 f9 12 00 	vmovaps 0x12f9(%rip),%xmm4        # 4024a0 <_IO_stdin_used+0x1f0>
+  4011a6:	00 
+  4011a7:	4c 89 c1             	mov    %r8,%rcx
+  4011aa:	48 89 fa             	mov    %rdi,%rdx
+  4011ad:	48 c1 e9 02          	shr    $0x2,%rcx
+  4011b1:	31 c0                	xor    %eax,%eax
+  4011b3:	c5 e0 57 db          	vxorps %xmm3,%xmm3,%xmm3
+  4011b7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  4011be:	00 00 
+  4011c0:	c5 f8 10 0a          	vmovups (%rdx),%xmm1
+  4011c4:	48 ff c0             	inc    %rax
+  4011c7:	48 83 c2 10          	add    $0x10,%rdx
+  4011cb:	c5 f9 72 d1 01       	vpsrld $0x1,%xmm1,%xmm0
+  4011d0:	c5 d1 72 d1 02       	vpsrld $0x2,%xmm1,%xmm5
+  4011d5:	c5 f8 54 c2          	vandps %xmm2,%xmm0,%xmm0
+  4011d9:	c5 d0 54 ea          	vandps %xmm2,%xmm5,%xmm5
+  4011dd:	c5 f9 fe c5          	vpaddd %xmm5,%xmm0,%xmm0
+  4011e1:	c5 f0 54 ea          	vandps %xmm2,%xmm1,%xmm5
+  4011e5:	c5 f9 fe c5          	vpaddd %xmm5,%xmm0,%xmm0
+  4011e9:	c5 d1 72 d1 03       	vpsrld $0x3,%xmm1,%xmm5
+  4011ee:	c5 d0 54 ea          	vandps %xmm2,%xmm5,%xmm5
+  4011f2:	c5 f9 fe c5          	vpaddd %xmm5,%xmm0,%xmm0
+  4011f6:	c5 d1 72 d1 04       	vpsrld $0x4,%xmm1,%xmm5
+  4011fb:	c5 d0 54 ea          	vandps %xmm2,%xmm5,%xmm5
+  4011ff:	c5 f9 fe c5          	vpaddd %xmm5,%xmm0,%xmm0
+  401203:	c5 d1 72 d1 05       	vpsrld $0x5,%xmm1,%xmm5
+  401208:	c5 d0 54 ea          	vandps %xmm2,%xmm5,%xmm5
+  40120c:	c5 f9 fe c5          	vpaddd %xmm5,%xmm0,%xmm0
+  401210:	c5 d1 72 d1 06       	vpsrld $0x6,%xmm1,%xmm5
+  401215:	c5 d0 54 ea          	vandps %xmm2,%xmm5,%xmm5
+  401219:	c5 f1 72 d1 07       	vpsrld $0x7,%xmm1,%xmm1
+  40121e:	c5 f9 fe c5          	vpaddd %xmm5,%xmm0,%xmm0
+  401222:	c5 f0 54 ca          	vandps %xmm2,%xmm1,%xmm1
+  401226:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+  40122a:	c5 f1 72 d0 10       	vpsrld $0x10,%xmm0,%xmm1
+  40122f:	c5 f1 fe c8          	vpaddd %xmm0,%xmm1,%xmm1
+  401233:	c5 f9 72 d1 08       	vpsrld $0x8,%xmm1,%xmm0
+  401238:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+  40123c:	c5 f8 54 c4          	vandps %xmm4,%xmm0,%xmm0
+  401240:	c5 e1 fe d8          	vpaddd %xmm0,%xmm3,%xmm3
+  401244:	48 39 c1             	cmp    %rax,%rcx
+  401247:	0f 87 73 ff ff ff    	ja     4011c0 <popcount05(unsigned int*, unsigned int*)+0x50>
+  40124d:	c5 f9 73 db 08       	vpsrldq $0x8,%xmm3,%xmm0
+  401252:	4c 89 c2             	mov    %r8,%rdx
+  401255:	c5 e1 fe d8          	vpaddd %xmm0,%xmm3,%xmm3
+  401259:	c5 f9 73 db 04       	vpsrldq $0x4,%xmm3,%xmm0
+  40125e:	48 83 e2 fc          	and    $0xfffffffffffffffc,%rdx
+  401262:	c5 e1 fe d8          	vpaddd %xmm0,%xmm3,%xmm3
+  401266:	c5 f9 7e d8          	vmovd  %xmm3,%eax
+  40126a:	48 8d 3c 97          	lea    (%rdi,%rdx,4),%rdi
+  40126e:	4c 39 c2             	cmp    %r8,%rdx
+  401271:	0f 84 ab 01 00 00    	je     401422 <popcount05(unsigned int*, unsigned int*)+0x2b2>
+  401277:	4c 8d 4f 04          	lea    0x4(%rdi),%r9
+  40127b:	8b 17                	mov    (%rdi),%edx
+  40127d:	89 d1                	mov    %edx,%ecx
+  40127f:	d1 e9                	shr    %ecx
+  401281:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  401287:	41 89 c8             	mov    %ecx,%r8d
+  40128a:	89 d1                	mov    %edx,%ecx
+  40128c:	c1 e9 02             	shr    $0x2,%ecx
+  40128f:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  401295:	44 01 c1             	add    %r8d,%ecx
+  401298:	41 89 d0             	mov    %edx,%r8d
+  40129b:	41 81 e0 01 01 01 01 	and    $0x1010101,%r8d
+  4012a2:	44 01 c1             	add    %r8d,%ecx
+  4012a5:	41 89 d0             	mov    %edx,%r8d
+  4012a8:	41 c1 e8 03          	shr    $0x3,%r8d
+  4012ac:	41 81 e0 01 01 01 01 	and    $0x1010101,%r8d
+  4012b3:	44 01 c1             	add    %r8d,%ecx
+  4012b6:	41 89 d0             	mov    %edx,%r8d
+  4012b9:	41 c1 e8 04          	shr    $0x4,%r8d
+  4012bd:	41 81 e0 01 01 01 01 	and    $0x1010101,%r8d
+  4012c4:	41 01 c8             	add    %ecx,%r8d
+  4012c7:	89 d1                	mov    %edx,%ecx
+  4012c9:	c1 e9 05             	shr    $0x5,%ecx
+  4012cc:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  4012d2:	41 01 c8             	add    %ecx,%r8d
+  4012d5:	89 d1                	mov    %edx,%ecx
+  4012d7:	c1 ea 07             	shr    $0x7,%edx
+  4012da:	c1 e9 06             	shr    $0x6,%ecx
+  4012dd:	81 e2 01 01 01 01    	and    $0x1010101,%edx
+  4012e3:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  4012e9:	44 01 c1             	add    %r8d,%ecx
+  4012ec:	01 ca                	add    %ecx,%edx
+  4012ee:	89 d1                	mov    %edx,%ecx
+  4012f0:	c1 e9 10             	shr    $0x10,%ecx
+  4012f3:	01 ca                	add    %ecx,%edx
+  4012f5:	89 d1                	mov    %edx,%ecx
+  4012f7:	c1 e9 08             	shr    $0x8,%ecx
+  4012fa:	01 ca                	add    %ecx,%edx
+  4012fc:	0f b6 d2             	movzbl %dl,%edx
+  4012ff:	01 d0                	add    %edx,%eax
+  401301:	4c 39 ce             	cmp    %r9,%rsi
+  401304:	0f 84 18 01 00 00    	je     401422 <popcount05(unsigned int*, unsigned int*)+0x2b2>
+  40130a:	8b 57 04             	mov    0x4(%rdi),%edx
+  40130d:	89 d1                	mov    %edx,%ecx
+  40130f:	d1 e9                	shr    %ecx
+  401311:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  401317:	41 89 c8             	mov    %ecx,%r8d
+  40131a:	89 d1                	mov    %edx,%ecx
+  40131c:	c1 e9 02             	shr    $0x2,%ecx
+  40131f:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  401325:	44 01 c1             	add    %r8d,%ecx
+  401328:	41 89 d0             	mov    %edx,%r8d
+  40132b:	41 81 e0 01 01 01 01 	and    $0x1010101,%r8d
+  401332:	44 01 c1             	add    %r8d,%ecx
+  401335:	41 89 d0             	mov    %edx,%r8d
+  401338:	41 c1 e8 03          	shr    $0x3,%r8d
+  40133c:	41 81 e0 01 01 01 01 	and    $0x1010101,%r8d
+  401343:	44 01 c1             	add    %r8d,%ecx
+  401346:	41 89 d0             	mov    %edx,%r8d
+  401349:	41 c1 e8 04          	shr    $0x4,%r8d
+  40134d:	41 81 e0 01 01 01 01 	and    $0x1010101,%r8d
+  401354:	41 01 c8             	add    %ecx,%r8d
+  401357:	89 d1                	mov    %edx,%ecx
+  401359:	c1 e9 05             	shr    $0x5,%ecx
+  40135c:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  401362:	41 01 c8             	add    %ecx,%r8d
+  401365:	89 d1                	mov    %edx,%ecx
+  401367:	c1 ea 07             	shr    $0x7,%edx
+  40136a:	c1 e9 06             	shr    $0x6,%ecx
+  40136d:	81 e2 01 01 01 01    	and    $0x1010101,%edx
+  401373:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  401379:	44 01 c1             	add    %r8d,%ecx
+  40137c:	01 ca                	add    %ecx,%edx
+  40137e:	89 d1                	mov    %edx,%ecx
+  401380:	c1 e9 10             	shr    $0x10,%ecx
+  401383:	01 ca                	add    %ecx,%edx
+  401385:	89 d1                	mov    %edx,%ecx
+  401387:	c1 e9 08             	shr    $0x8,%ecx
+  40138a:	01 ca                	add    %ecx,%edx
+  40138c:	0f b6 d2             	movzbl %dl,%edx
+  40138f:	01 d0                	add    %edx,%eax
+  401391:	48 8d 57 08          	lea    0x8(%rdi),%rdx
+  401395:	48 39 d6             	cmp    %rdx,%rsi
+  401398:	0f 84 84 00 00 00    	je     401422 <popcount05(unsigned int*, unsigned int*)+0x2b2>
+  40139e:	8b 57 08             	mov    0x8(%rdi),%edx
+  4013a1:	89 d1                	mov    %edx,%ecx
+  4013a3:	c1 e9 02             	shr    $0x2,%ecx
+  4013a6:	89 ce                	mov    %ecx,%esi
+  4013a8:	89 d1                	mov    %edx,%ecx
+  4013aa:	d1 e9                	shr    %ecx
+  4013ac:	81 e6 01 01 01 01    	and    $0x1010101,%esi
+  4013b2:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  4013b8:	01 f1                	add    %esi,%ecx
+  4013ba:	89 d6                	mov    %edx,%esi
+  4013bc:	81 e6 01 01 01 01    	and    $0x1010101,%esi
+  4013c2:	01 f1                	add    %esi,%ecx
+  4013c4:	89 d6                	mov    %edx,%esi
+  4013c6:	c1 ee 03             	shr    $0x3,%esi
+  4013c9:	81 e6 01 01 01 01    	and    $0x1010101,%esi
+  4013cf:	01 f1                	add    %esi,%ecx
+  4013d1:	89 d6                	mov    %edx,%esi
+  4013d3:	c1 ee 04             	shr    $0x4,%esi
+  4013d6:	81 e6 01 01 01 01    	and    $0x1010101,%esi
+  4013dc:	01 ce                	add    %ecx,%esi
+  4013de:	89 d1                	mov    %edx,%ecx
+  4013e0:	c1 e9 05             	shr    $0x5,%ecx
+  4013e3:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  4013e9:	01 ce                	add    %ecx,%esi
+  4013eb:	89 d1                	mov    %edx,%ecx
+  4013ed:	c1 ea 07             	shr    $0x7,%edx
+  4013f0:	c1 e9 06             	shr    $0x6,%ecx
+  4013f3:	81 e2 01 01 01 01    	and    $0x1010101,%edx
+  4013f9:	81 e1 01 01 01 01    	and    $0x1010101,%ecx
+  4013ff:	01 f1                	add    %esi,%ecx
+  401401:	01 ca                	add    %ecx,%edx
+  401403:	89 d1                	mov    %edx,%ecx
+  401405:	c1 e9 10             	shr    $0x10,%ecx
+  401408:	01 d1                	add    %edx,%ecx
+  40140a:	89 ca                	mov    %ecx,%edx
+  40140c:	c1 ea 08             	shr    $0x8,%edx
+  40140f:	01 ca                	add    %ecx,%edx
+  401411:	0f b6 d2             	movzbl %dl,%edx
+  401414:	01 d0                	add    %edx,%eax
+  401416:	c3                   	retq   
+  401417:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40141e:	00 00 
+  401420:	31 c0                	xor    %eax,%eax
+  401422:	c3                   	retq   
+  401423:	0f 1f 00             	nopl   (%rax)
+  401426:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40142d:	00 00 00 
+  401430:	31 c0                	xor    %eax,%eax
+  401432:	e9 44 fe ff ff       	jmpq   40127b <popcount05(unsigned int*, unsigned int*)+0x10b>
+  401437:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40143e:	00 00 
+
+0000000000401440 <popcount06(unsigned int*, unsigned int*)>:
+  401440:	48 39 f7             	cmp    %rsi,%rdi
+  401443:	0f 84 17 02 00 00    	je     401660 <popcount06(unsigned int*, unsigned int*)+0x220>
+  401449:	4c 8d 47 04          	lea    0x4(%rdi),%r8
+  40144d:	48 89 f0             	mov    %rsi,%rax
+  401450:	4c 29 c0             	sub    %r8,%rax
+  401453:	49 89 c1             	mov    %rax,%r9
+  401456:	49 c1 e9 02          	shr    $0x2,%r9
+  40145a:	49 ff c1             	inc    %r9
+  40145d:	48 83 f8 08          	cmp    $0x8,%rax
+  401461:	0f 86 09 02 00 00    	jbe    401670 <popcount06(unsigned int*, unsigned int*)+0x230>
+  401467:	c5 f8 28 35 41 10 00 	vmovaps 0x1041(%rip),%xmm6        # 4024b0 <_IO_stdin_used+0x200>
+  40146e:	00 
+  40146f:	c5 f8 28 2d 49 10 00 	vmovaps 0x1049(%rip),%xmm5        # 4024c0 <_IO_stdin_used+0x210>
+  401476:	00 
+  401477:	4c 89 c9             	mov    %r9,%rcx
+  40147a:	48 89 fa             	mov    %rdi,%rdx
+  40147d:	c5 f8 28 25 4b 10 00 	vmovaps 0x104b(%rip),%xmm4        # 4024d0 <_IO_stdin_used+0x220>
+  401484:	00 
+  401485:	c5 f8 28 1d 53 10 00 	vmovaps 0x1053(%rip),%xmm3        # 4024e0 <_IO_stdin_used+0x230>
+  40148c:	00 
+  40148d:	48 c1 e9 02          	shr    $0x2,%rcx
+  401491:	31 c0                	xor    %eax,%eax
+  401493:	c5 f8 28 3d 55 10 00 	vmovaps 0x1055(%rip),%xmm7        # 4024f0 <_IO_stdin_used+0x240>
+  40149a:	00 
+  40149b:	c5 e8 57 d2          	vxorps %xmm2,%xmm2,%xmm2
+  40149f:	90                   	nop
+  4014a0:	c5 f8 10 0a          	vmovups (%rdx),%xmm1
+  4014a4:	c5 c8 54 02          	vandps (%rdx),%xmm6,%xmm0
+  4014a8:	48 ff c0             	inc    %rax
+  4014ab:	48 83 c2 10          	add    $0x10,%rdx
+  4014af:	c5 f1 72 d1 01       	vpsrld $0x1,%xmm1,%xmm1
+  4014b4:	c5 f0 54 ce          	vandps %xmm6,%xmm1,%xmm1
+  4014b8:	c5 f1 fe c8          	vpaddd %xmm0,%xmm1,%xmm1
+  4014bc:	c5 f9 72 d1 02       	vpsrld $0x2,%xmm1,%xmm0
+  4014c1:	c5 f0 54 cd          	vandps %xmm5,%xmm1,%xmm1
+  4014c5:	c5 f8 54 c5          	vandps %xmm5,%xmm0,%xmm0
+  4014c9:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+  4014cd:	c5 f1 72 d0 04       	vpsrld $0x4,%xmm0,%xmm1
+  4014d2:	c5 f8 54 c4          	vandps %xmm4,%xmm0,%xmm0
+  4014d6:	c5 f0 54 cc          	vandps %xmm4,%xmm1,%xmm1
+  4014da:	c5 f1 fe c8          	vpaddd %xmm0,%xmm1,%xmm1
+  4014de:	c5 f9 72 d1 08       	vpsrld $0x8,%xmm1,%xmm0
+  4014e3:	c5 f0 54 cb          	vandps %xmm3,%xmm1,%xmm1
+  4014e7:	c5 f8 54 c3          	vandps %xmm3,%xmm0,%xmm0
+  4014eb:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+  4014ef:	c5 f8 54 cf          	vandps %xmm7,%xmm0,%xmm1
+  4014f3:	c5 f9 72 d0 10       	vpsrld $0x10,%xmm0,%xmm0
+  4014f8:	c5 f1 fe c0          	vpaddd %xmm0,%xmm1,%xmm0
+  4014fc:	c5 e9 fe d0          	vpaddd %xmm0,%xmm2,%xmm2
+  401500:	48 39 c8             	cmp    %rcx,%rax
+  401503:	72 9b                	jb     4014a0 <popcount06(unsigned int*, unsigned int*)+0x60>
+  401505:	c5 f9 73 da 08       	vpsrldq $0x8,%xmm2,%xmm0
+  40150a:	4c 89 ca             	mov    %r9,%rdx
+  40150d:	c5 e9 fe d0          	vpaddd %xmm0,%xmm2,%xmm2
+  401511:	c5 f9 73 da 04       	vpsrldq $0x4,%xmm2,%xmm0
+  401516:	48 83 e2 fc          	and    $0xfffffffffffffffc,%rdx
+  40151a:	c5 e9 fe d0          	vpaddd %xmm0,%xmm2,%xmm2
+  40151e:	c5 f9 7e d0          	vmovd  %xmm2,%eax
+  401522:	48 8d 3c 97          	lea    (%rdi,%rdx,4),%rdi
+  401526:	49 39 d1             	cmp    %rdx,%r9
+  401529:	0f 84 33 01 00 00    	je     401662 <popcount06(unsigned int*, unsigned int*)+0x222>
+  40152f:	4c 8d 47 04          	lea    0x4(%rdi),%r8
+  401533:	8b 17                	mov    (%rdi),%edx
+  401535:	89 d1                	mov    %edx,%ecx
+  401537:	d1 ea                	shr    %edx
+  401539:	81 e2 55 55 55 55    	and    $0x55555555,%edx
+  40153f:	81 e1 55 55 55 55    	and    $0x55555555,%ecx
+  401545:	01 d1                	add    %edx,%ecx
+  401547:	89 ca                	mov    %ecx,%edx
+  401549:	c1 e9 02             	shr    $0x2,%ecx
+  40154c:	81 e1 33 33 33 33    	and    $0x33333333,%ecx
+  401552:	81 e2 33 33 33 33    	and    $0x33333333,%edx
+  401558:	01 ca                	add    %ecx,%edx
+  40155a:	89 d1                	mov    %edx,%ecx
+  40155c:	c1 ea 04             	shr    $0x4,%edx
+  40155f:	81 e2 0f 0f 0f 0f    	and    $0xf0f0f0f,%edx
+  401565:	81 e1 0f 0f 0f 0f    	and    $0xf0f0f0f,%ecx
+  40156b:	01 d1                	add    %edx,%ecx
+  40156d:	89 ca                	mov    %ecx,%edx
+  40156f:	c1 e9 08             	shr    $0x8,%ecx
+  401572:	81 e1 ff 00 ff 00    	and    $0xff00ff,%ecx
+  401578:	81 e2 ff 00 ff 00    	and    $0xff00ff,%edx
+  40157e:	01 ca                	add    %ecx,%edx
+  401580:	89 d1                	mov    %edx,%ecx
+  401582:	0f b7 d2             	movzwl %dx,%edx
+  401585:	c1 e9 10             	shr    $0x10,%ecx
+  401588:	01 ca                	add    %ecx,%edx
+  40158a:	01 d0                	add    %edx,%eax
+  40158c:	4c 39 c6             	cmp    %r8,%rsi
+  40158f:	0f 84 cd 00 00 00    	je     401662 <popcount06(unsigned int*, unsigned int*)+0x222>
+  401595:	8b 57 04             	mov    0x4(%rdi),%edx
+  401598:	89 d1                	mov    %edx,%ecx
+  40159a:	d1 ea                	shr    %edx
+  40159c:	81 e1 55 55 55 55    	and    $0x55555555,%ecx
+  4015a2:	81 e2 55 55 55 55    	and    $0x55555555,%edx
+  4015a8:	01 ca                	add    %ecx,%edx
+  4015aa:	89 d1                	mov    %edx,%ecx
+  4015ac:	c1 ea 02             	shr    $0x2,%edx
+  4015af:	81 e1 33 33 33 33    	and    $0x33333333,%ecx
+  4015b5:	81 e2 33 33 33 33    	and    $0x33333333,%edx
+  4015bb:	01 ca                	add    %ecx,%edx
+  4015bd:	89 d1                	mov    %edx,%ecx
+  4015bf:	c1 ea 04             	shr    $0x4,%edx
+  4015c2:	81 e1 0f 0f 0f 0f    	and    $0xf0f0f0f,%ecx
+  4015c8:	81 e2 0f 0f 0f 0f    	and    $0xf0f0f0f,%edx
+  4015ce:	01 ca                	add    %ecx,%edx
+  4015d0:	89 d1                	mov    %edx,%ecx
+  4015d2:	c1 ea 08             	shr    $0x8,%edx
+  4015d5:	81 e1 ff 00 ff 00    	and    $0xff00ff,%ecx
+  4015db:	81 e2 ff 00 ff 00    	and    $0xff00ff,%edx
+  4015e1:	01 ca                	add    %ecx,%edx
+  4015e3:	0f b7 ca             	movzwl %dx,%ecx
+  4015e6:	c1 ea 10             	shr    $0x10,%edx
+  4015e9:	01 ca                	add    %ecx,%edx
+  4015eb:	01 d0                	add    %edx,%eax
+  4015ed:	48 8d 57 08          	lea    0x8(%rdi),%rdx
+  4015f1:	48 39 d6             	cmp    %rdx,%rsi
+  4015f4:	74 6c                	je     401662 <popcount06(unsigned int*, unsigned int*)+0x222>
+  4015f6:	8b 57 08             	mov    0x8(%rdi),%edx
+  4015f9:	89 d1                	mov    %edx,%ecx
+  4015fb:	d1 ea                	shr    %edx
+  4015fd:	81 e2 55 55 55 55    	and    $0x55555555,%edx
+  401603:	81 e1 55 55 55 55    	and    $0x55555555,%ecx
+  401609:	01 d1                	add    %edx,%ecx
+  40160b:	89 ca                	mov    %ecx,%edx
+  40160d:	c1 e9 02             	shr    $0x2,%ecx
+  401610:	81 e1 33 33 33 33    	and    $0x33333333,%ecx
+  401616:	81 e2 33 33 33 33    	and    $0x33333333,%edx
+  40161c:	01 ca                	add    %ecx,%edx
+  40161e:	89 d1                	mov    %edx,%ecx
+  401620:	c1 ea 04             	shr    $0x4,%edx
+  401623:	81 e2 0f 0f 0f 0f    	and    $0xf0f0f0f,%edx
+  401629:	81 e1 0f 0f 0f 0f    	and    $0xf0f0f0f,%ecx
+  40162f:	01 d1                	add    %edx,%ecx
+  401631:	89 ca                	mov    %ecx,%edx
+  401633:	c1 e9 08             	shr    $0x8,%ecx
+  401636:	81 e1 ff 00 ff 00    	and    $0xff00ff,%ecx
+  40163c:	81 e2 ff 00 ff 00    	and    $0xff00ff,%edx
+  401642:	01 ca                	add    %ecx,%edx
+  401644:	89 d1                	mov    %edx,%ecx
+  401646:	0f b7 d2             	movzwl %dx,%edx
+  401649:	c1 e9 10             	shr    $0x10,%ecx
+  40164c:	01 ca                	add    %ecx,%edx
+  40164e:	01 d0                	add    %edx,%eax
+  401650:	c3                   	retq   
+  401651:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401656:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40165d:	00 00 00 
+  401660:	31 c0                	xor    %eax,%eax
+  401662:	c3                   	retq   
+  401663:	0f 1f 00             	nopl   (%rax)
+  401666:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40166d:	00 00 00 
+  401670:	31 c0                	xor    %eax,%eax
+  401672:	e9 bc fe ff ff       	jmpq   401533 <popcount06(unsigned int*, unsigned int*)+0xf3>
+  401677:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40167e:	00 00 
+
+0000000000401680 <popcount07(unsigned int*, unsigned int*)>:
+  401680:	48 39 f7             	cmp    %rsi,%rdi
+  401683:	0f 84 97 01 00 00    	je     401820 <popcount07(unsigned int*, unsigned int*)+0x1a0>
+  401689:	4c 8d 4f 04          	lea    0x4(%rdi),%r9
+  40168d:	48 89 f0             	mov    %rsi,%rax
+  401690:	4c 29 c8             	sub    %r9,%rax
+  401693:	49 89 c0             	mov    %rax,%r8
+  401696:	49 c1 e8 02          	shr    $0x2,%r8
+  40169a:	49 ff c0             	inc    %r8
+  40169d:	48 83 f8 08          	cmp    $0x8,%rax
+  4016a1:	0f 86 89 01 00 00    	jbe    401830 <popcount07(unsigned int*, unsigned int*)+0x1b0>
+  4016a7:	c5 f8 28 35 01 0e 00 	vmovaps 0xe01(%rip),%xmm6        # 4024b0 <_IO_stdin_used+0x200>
+  4016ae:	00 
+  4016af:	c5 f8 28 1d 09 0e 00 	vmovaps 0xe09(%rip),%xmm3        # 4024c0 <_IO_stdin_used+0x210>
+  4016b6:	00 
+  4016b7:	4c 89 c1             	mov    %r8,%rcx
+  4016ba:	48 89 fa             	mov    %rdi,%rdx
+  4016bd:	c5 f8 28 2d 0b 0e 00 	vmovaps 0xe0b(%rip),%xmm5        # 4024d0 <_IO_stdin_used+0x220>
+  4016c4:	00 
+  4016c5:	c5 f8 28 25 c3 0d 00 	vmovaps 0xdc3(%rip),%xmm4        # 402490 <_IO_stdin_used+0x1e0>
+  4016cc:	00 
+  4016cd:	48 c1 e9 02          	shr    $0x2,%rcx
+  4016d1:	31 c0                	xor    %eax,%eax
+  4016d3:	c5 e8 57 d2          	vxorps %xmm2,%xmm2,%xmm2
+  4016d7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  4016de:	00 00 
+  4016e0:	c5 f8 10 0a          	vmovups (%rdx),%xmm1
+  4016e4:	48 ff c0             	inc    %rax
+  4016e7:	48 83 c2 10          	add    $0x10,%rdx
+  4016eb:	c5 f9 72 d1 01       	vpsrld $0x1,%xmm1,%xmm0
+  4016f0:	c5 f8 54 c6          	vandps %xmm6,%xmm0,%xmm0
+  4016f4:	c5 f1 fa c8          	vpsubd %xmm0,%xmm1,%xmm1
+  4016f8:	c5 f9 72 d1 02       	vpsrld $0x2,%xmm1,%xmm0
+  4016fd:	c5 f0 54 cb          	vandps %xmm3,%xmm1,%xmm1
+  401701:	c5 f8 54 c3          	vandps %xmm3,%xmm0,%xmm0
+  401705:	c5 f9 fe c9          	vpaddd %xmm1,%xmm0,%xmm1
+  401709:	c5 f9 72 d1 04       	vpsrld $0x4,%xmm1,%xmm0
+  40170e:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+  401712:	c5 f8 54 c5          	vandps %xmm5,%xmm0,%xmm0
+  401716:	c4 e2 79 40 c4       	vpmulld %xmm4,%xmm0,%xmm0
+  40171b:	c5 f9 72 d0 18       	vpsrld $0x18,%xmm0,%xmm0
+  401720:	c5 e9 fe d0          	vpaddd %xmm0,%xmm2,%xmm2
+  401724:	48 39 c8             	cmp    %rcx,%rax
+  401727:	72 b7                	jb     4016e0 <popcount07(unsigned int*, unsigned int*)+0x60>
+  401729:	c5 f9 73 da 08       	vpsrldq $0x8,%xmm2,%xmm0
+  40172e:	4c 89 c2             	mov    %r8,%rdx
+  401731:	c5 e9 fe d0          	vpaddd %xmm0,%xmm2,%xmm2
+  401735:	c5 f9 73 da 04       	vpsrldq $0x4,%xmm2,%xmm0
+  40173a:	48 83 e2 fc          	and    $0xfffffffffffffffc,%rdx
+  40173e:	c5 e9 fe d0          	vpaddd %xmm0,%xmm2,%xmm2
+  401742:	c5 f9 7e d0          	vmovd  %xmm2,%eax
+  401746:	48 8d 3c 97          	lea    (%rdi,%rdx,4),%rdi
+  40174a:	49 39 d0             	cmp    %rdx,%r8
+  40174d:	0f 84 cf 00 00 00    	je     401822 <popcount07(unsigned int*, unsigned int*)+0x1a2>
+  401753:	4c 8d 4f 04          	lea    0x4(%rdi),%r9
+  401757:	8b 0f                	mov    (%rdi),%ecx
+  401759:	89 ca                	mov    %ecx,%edx
+  40175b:	d1 ea                	shr    %edx
+  40175d:	81 e2 55 55 55 55    	and    $0x55555555,%edx
+  401763:	29 d1                	sub    %edx,%ecx
+  401765:	89 ca                	mov    %ecx,%edx
+  401767:	c1 e9 02             	shr    $0x2,%ecx
+  40176a:	81 e1 33 33 33 33    	and    $0x33333333,%ecx
+  401770:	81 e2 33 33 33 33    	and    $0x33333333,%edx
+  401776:	01 ca                	add    %ecx,%edx
+  401778:	89 d1                	mov    %edx,%ecx
+  40177a:	c1 e9 04             	shr    $0x4,%ecx
+  40177d:	01 ca                	add    %ecx,%edx
+  40177f:	81 e2 0f 0f 0f 0f    	and    $0xf0f0f0f,%edx
+  401785:	69 d2 01 01 01 01    	imul   $0x1010101,%edx,%edx
+  40178b:	c1 ea 18             	shr    $0x18,%edx
+  40178e:	01 d0                	add    %edx,%eax
+  401790:	4c 39 ce             	cmp    %r9,%rsi
+  401793:	0f 84 89 00 00 00    	je     401822 <popcount07(unsigned int*, unsigned int*)+0x1a2>
+  401799:	8b 4f 04             	mov    0x4(%rdi),%ecx
+  40179c:	89 ca                	mov    %ecx,%edx
+  40179e:	d1 ea                	shr    %edx
+  4017a0:	81 e2 55 55 55 55    	and    $0x55555555,%edx
+  4017a6:	29 d1                	sub    %edx,%ecx
+  4017a8:	89 ca                	mov    %ecx,%edx
+  4017aa:	c1 e9 02             	shr    $0x2,%ecx
+  4017ad:	81 e2 33 33 33 33    	and    $0x33333333,%edx
+  4017b3:	81 e1 33 33 33 33    	and    $0x33333333,%ecx
+  4017b9:	01 d1                	add    %edx,%ecx
+  4017bb:	89 ca                	mov    %ecx,%edx
+  4017bd:	c1 ea 04             	shr    $0x4,%edx
+  4017c0:	01 ca                	add    %ecx,%edx
+  4017c2:	81 e2 0f 0f 0f 0f    	and    $0xf0f0f0f,%edx
+  4017c8:	69 d2 01 01 01 01    	imul   $0x1010101,%edx,%edx
+  4017ce:	c1 ea 18             	shr    $0x18,%edx
+  4017d1:	01 d0                	add    %edx,%eax
+  4017d3:	48 8d 57 08          	lea    0x8(%rdi),%rdx
+  4017d7:	48 39 d6             	cmp    %rdx,%rsi
+  4017da:	74 46                	je     401822 <popcount07(unsigned int*, unsigned int*)+0x1a2>
+  4017dc:	8b 4f 08             	mov    0x8(%rdi),%ecx
+  4017df:	89 ca                	mov    %ecx,%edx
+  4017e1:	d1 ea                	shr    %edx
+  4017e3:	81 e2 55 55 55 55    	and    $0x55555555,%edx
+  4017e9:	29 d1                	sub    %edx,%ecx
+  4017eb:	89 ca                	mov    %ecx,%edx
+  4017ed:	c1 e9 02             	shr    $0x2,%ecx
+  4017f0:	81 e1 33 33 33 33    	and    $0x33333333,%ecx
+  4017f6:	81 e2 33 33 33 33    	and    $0x33333333,%edx
+  4017fc:	01 ca                	add    %ecx,%edx
+  4017fe:	89 d1                	mov    %edx,%ecx
+  401800:	c1 e9 04             	shr    $0x4,%ecx
+  401803:	01 ca                	add    %ecx,%edx
+  401805:	81 e2 0f 0f 0f 0f    	and    $0xf0f0f0f,%edx
+  40180b:	69 d2 01 01 01 01    	imul   $0x1010101,%edx,%edx
+  401811:	c1 ea 18             	shr    $0x18,%edx
+  401814:	01 d0                	add    %edx,%eax
+  401816:	c3                   	retq   
+  401817:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40181e:	00 00 
+  401820:	31 c0                	xor    %eax,%eax
+  401822:	c3                   	retq   
+  401823:	0f 1f 00             	nopl   (%rax)
+  401826:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40182d:	00 00 00 
+  401830:	31 c0                	xor    %eax,%eax
+  401832:	e9 20 ff ff ff       	jmpq   401757 <popcount07(unsigned int*, unsigned int*)+0xd7>
+  401837:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40183e:	00 00 
+
+0000000000401840 <popcount08(unsigned int*, unsigned int*)>:
+  401840:	31 c0                	xor    %eax,%eax
+  401842:	48 39 f7             	cmp    %rsi,%rdi
+  401845:	74 2c                	je     401873 <popcount08(unsigned int*, unsigned int*)+0x33>
+  401847:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40184e:	00 00 
+  401850:	48 83 c7 04          	add    $0x4,%rdi
+  401854:	8b 57 fc             	mov    -0x4(%rdi),%edx
+  401857:	85 d2                	test   %edx,%edx
+  401859:	74 12                	je     40186d <popcount08(unsigned int*, unsigned int*)+0x2d>
+  40185b:	31 c9                	xor    %ecx,%ecx
+  40185d:	0f 1f 00             	nopl   (%rax)
+  401860:	c4 e2 68 f3 ca       	blsr   %edx,%edx
+  401865:	ff c1                	inc    %ecx
+  401867:	85 d2                	test   %edx,%edx
+  401869:	75 f5                	jne    401860 <popcount08(unsigned int*, unsigned int*)+0x20>
+  40186b:	01 c8                	add    %ecx,%eax
+  40186d:	48 39 fe             	cmp    %rdi,%rsi
+  401870:	75 de                	jne    401850 <popcount08(unsigned int*, unsigned int*)+0x10>
+  401872:	c3                   	retq   
+  401873:	c3                   	retq   
+  401874:	66 90                	xchg   %ax,%ax
+  401876:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40187d:	00 00 00 
+
+0000000000401880 <popcount09(unsigned int*, unsigned int*)>:
+  401880:	31 c0                	xor    %eax,%eax
+  401882:	48 39 f7             	cmp    %rsi,%rdi
+  401885:	74 59                	je     4018e0 <popcount09(unsigned int*, unsigned int*)+0x60>
+  401887:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40188e:	00 00 
+  401890:	48 83 c7 04          	add    $0x4,%rdi
+  401894:	8b 57 fc             	mov    -0x4(%rdi),%edx
+  401897:	0f b6 ce             	movzbl %dh,%ecx
+  40189a:	44 0f b6 c2          	movzbl %dl,%r8d
+  40189e:	45 0f b6 80 c0 31 61 	movzbl 0x6131c0(%r8),%r8d
+  4018a5:	00 
+  4018a6:	0f b6 89 c0 31 61 00 	movzbl 0x6131c0(%rcx),%ecx
+  4018ad:	44 01 c1             	add    %r8d,%ecx
+  4018b0:	41 89 d0             	mov    %edx,%r8d
+  4018b3:	c1 ea 18             	shr    $0x18,%edx
+  4018b6:	41 c1 e8 10          	shr    $0x10,%r8d
+  4018ba:	0f b6 92 c0 31 61 00 	movzbl 0x6131c0(%rdx),%edx
+  4018c1:	45 0f b6 c0          	movzbl %r8b,%r8d
+  4018c5:	45 0f b6 80 c0 31 61 	movzbl 0x6131c0(%r8),%r8d
+  4018cc:	00 
+  4018cd:	44 01 c1             	add    %r8d,%ecx
+  4018d0:	01 ca                	add    %ecx,%edx
+  4018d2:	01 d0                	add    %edx,%eax
+  4018d4:	48 39 fe             	cmp    %rdi,%rsi
+  4018d7:	75 b7                	jne    401890 <popcount09(unsigned int*, unsigned int*)+0x10>
+  4018d9:	c3                   	retq   
+  4018da:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+  4018e0:	c3                   	retq   
+  4018e1:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  4018e6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  4018ed:	00 00 00 
+
+00000000004018f0 <popcount10(unsigned int*, unsigned int*)>:
+  4018f0:	45 31 c0             	xor    %r8d,%r8d
+  4018f3:	48 39 f7             	cmp    %rsi,%rdi
+  4018f6:	74 45                	je     40193d <popcount10(unsigned int*, unsigned int*)+0x4d>
+  4018f8:	45 31 c9             	xor    %r9d,%r9d
+  4018fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401900:	48 83 c7 04          	add    $0x4,%rdi
+  401904:	8b 57 fc             	mov    -0x4(%rdi),%edx
+  401907:	44 89 c8             	mov    %r9d,%eax
+  40190a:	0f b6 ca             	movzbl %dl,%ecx
+  40190d:	67 02 81 c0 31 61 00 	add    0x6131c0(%ecx),%al
+  401914:	0f b6 ce             	movzbl %dh,%ecx
+  401917:	67 02 81 c0 31 61 00 	add    0x6131c0(%ecx),%al
+  40191e:	c1 ea 10             	shr    $0x10,%edx
+  401921:	0f b6 ca             	movzbl %dl,%ecx
+  401924:	67 02 81 c0 31 61 00 	add    0x6131c0(%ecx),%al
+  40192b:	0f b6 ce             	movzbl %dh,%ecx
+  40192e:	67 02 81 c0 31 61 00 	add    0x6131c0(%ecx),%al
+  401935:	41 01 c0             	add    %eax,%r8d
+  401938:	48 39 fe             	cmp    %rdi,%rsi
+  40193b:	75 c3                	jne    401900 <popcount10(unsigned int*, unsigned int*)+0x10>
+  40193d:	44 89 c0             	mov    %r8d,%eax
+  401940:	c3                   	retq   
+  401941:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401946:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40194d:	00 00 00 
+
+0000000000401950 <popcount11(unsigned int*, unsigned int*)>:
+  401950:	48 39 f7             	cmp    %rsi,%rdi
+  401953:	74 3b                	je     401990 <popcount11(unsigned int*, unsigned int*)+0x40>
+  401955:	53                   	push   %rbx
+  401956:	31 d2                	xor    %edx,%edx
+  401958:	bb c0 31 61 00       	mov    $0x6131c0,%ebx
+  40195d:	45 31 c0             	xor    %r8d,%r8d
+  401960:	48 83 c7 04          	add    $0x4,%rdi
+  401964:	0f b6 47 fc          	movzbl -0x4(%rdi),%eax
+  401968:	44 89 c1             	mov    %r8d,%ecx
+  40196b:	d7                   	xlat   %ds:(%rbx)
+  40196c:	00 c1                	add    %al,%cl
+  40196e:	0f b6 47 fd          	movzbl -0x3(%rdi),%eax
+  401972:	d7                   	xlat   %ds:(%rbx)
+  401973:	00 c1                	add    %al,%cl
+  401975:	0f b6 47 fe          	movzbl -0x2(%rdi),%eax
+  401979:	d7                   	xlat   %ds:(%rbx)
+  40197a:	00 c1                	add    %al,%cl
+  40197c:	0f b6 47 ff          	movzbl -0x1(%rdi),%eax
+  401980:	d7                   	xlat   %ds:(%rbx)
+  401981:	00 c1                	add    %al,%cl
+  401983:	01 ca                	add    %ecx,%edx
+  401985:	48 39 fe             	cmp    %rdi,%rsi
+  401988:	75 d6                	jne    401960 <popcount11(unsigned int*, unsigned int*)+0x10>
+  40198a:	89 d0                	mov    %edx,%eax
+  40198c:	5b                   	pop    %rbx
+  40198d:	c3                   	retq   
+  40198e:	66 90                	xchg   %ax,%ax
+  401990:	31 d2                	xor    %edx,%edx
+  401992:	89 d0                	mov    %edx,%eax
+  401994:	c3                   	retq   
+  401995:	90                   	nop
+  401996:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40199d:	00 00 00 
+
+00000000004019a0 <popcount12(unsigned int*, unsigned int*)>:
+  4019a0:	31 c0                	xor    %eax,%eax
+  4019a2:	48 39 f7             	cmp    %rsi,%rdi
+  4019a5:	74 30                	je     4019d7 <popcount12(unsigned int*, unsigned int*)+0x37>
+  4019a7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  4019ae:	00 00 
+  4019b0:	48 83 c7 04          	add    $0x4,%rdi
+  4019b4:	8b 57 fc             	mov    -0x4(%rdi),%edx
+  4019b7:	85 d2                	test   %edx,%edx
+  4019b9:	74 16                	je     4019d1 <popcount12(unsigned int*, unsigned int*)+0x31>
+  4019bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  4019c0:	0f b6 ca             	movzbl %dl,%ecx
+  4019c3:	0f b6 89 c0 31 61 00 	movzbl 0x6131c0(%rcx),%ecx
+  4019ca:	01 c8                	add    %ecx,%eax
+  4019cc:	c1 ea 08             	shr    $0x8,%edx
+  4019cf:	75 ef                	jne    4019c0 <popcount12(unsigned int*, unsigned int*)+0x20>
+  4019d1:	48 39 fe             	cmp    %rdi,%rsi
+  4019d4:	75 da                	jne    4019b0 <popcount12(unsigned int*, unsigned int*)+0x10>
+  4019d6:	c3                   	retq   
+  4019d7:	c3                   	retq   
+  4019d8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  4019df:	00 
+
+00000000004019e0 <popcount13(unsigned int*, unsigned int*)>:
+  4019e0:	31 c0                	xor    %eax,%eax
+  4019e2:	48 39 f7             	cmp    %rsi,%rdi
+  4019e5:	74 39                	je     401a20 <popcount13(unsigned int*, unsigned int*)+0x40>
+  4019e7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  4019ee:	00 00 
+  4019f0:	48 83 c7 04          	add    $0x4,%rdi
+  4019f4:	8b 57 fc             	mov    -0x4(%rdi),%edx
+  4019f7:	0f b7 ca             	movzwl %dx,%ecx
+  4019fa:	c1 ea 10             	shr    $0x10,%edx
+  4019fd:	0f b6 89 c0 31 60 00 	movzbl 0x6031c0(%rcx),%ecx
+  401a04:	0f b6 92 c0 31 60 00 	movzbl 0x6031c0(%rdx),%edx
+  401a0b:	01 ca                	add    %ecx,%edx
+  401a0d:	01 d0                	add    %edx,%eax
+  401a0f:	48 39 fe             	cmp    %rdi,%rsi
+  401a12:	75 dc                	jne    4019f0 <popcount13(unsigned int*, unsigned int*)+0x10>
+  401a14:	c3                   	retq   
+  401a15:	90                   	nop
+  401a16:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401a1d:	00 00 00 
+  401a20:	c3                   	retq   
+  401a21:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401a26:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401a2d:	00 00 00 
+
+0000000000401a30 <popcount17(unsigned int*, unsigned int*)>:
+  401a30:	31 c0                	xor    %eax,%eax
+  401a32:	f3 48 0f b8 17       	popcnt (%rdi),%rdx
+  401a37:	48 83 c7 08          	add    $0x8,%rdi
+  401a3b:	48 01 d0             	add    %rdx,%rax
+  401a3e:	48 39 fe             	cmp    %rdi,%rsi
+  401a41:	75 ef                	jne    401a32 <popcount17(unsigned int*, unsigned int*)+0x2>
+  401a43:	c3                   	retq   
+  401a44:	66 90                	xchg   %ax,%ax
+  401a46:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401a4d:	00 00 00 
+
+0000000000401a50 <popcount18(unsigned int*, unsigned int*)>:
+  401a50:	31 c0                	xor    %eax,%eax
+  401a52:	0f 1f 40 00          	nopl   0x0(%rax)
+  401a56:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401a5d:	00 00 00 
+  401a60:	f3 48 0f b8 17       	popcnt (%rdi),%rdx
+  401a65:	48 01 d0             	add    %rdx,%rax
+  401a68:	48 83 c7 08          	add    $0x8,%rdi
+  401a6c:	48 39 f7             	cmp    %rsi,%rdi
+  401a6f:	75 ef                	jne    401a60 <popcount18(unsigned int*, unsigned int*)+0x10>
+  401a71:	c3                   	retq   
+  401a72:	0f 1f 40 00          	nopl   0x0(%rax)
+  401a76:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401a7d:	00 00 00 
+
+0000000000401a80 <popcount19(unsigned int*, unsigned int*)>:
+  401a80:	31 c0                	xor    %eax,%eax
+  401a82:	0f 1f 40 00          	nopl   0x0(%rax)
+  401a86:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401a8d:	00 00 00 
+  401a90:	f3 48 0f b8 17       	popcnt (%rdi),%rdx
+  401a95:	48 83 c7 08          	add    $0x8,%rdi
+  401a99:	48 01 d0             	add    %rdx,%rax
+  401a9c:	48 39 f7             	cmp    %rsi,%rdi
+  401a9f:	75 ef                	jne    401a90 <popcount19(unsigned int*, unsigned int*)+0x10>
+  401aa1:	c3                   	retq   
+  401aa2:	0f 1f 40 00          	nopl   0x0(%rax)
+  401aa6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401aad:	00 00 00 
+
+0000000000401ab0 <popcount20(unsigned int*, unsigned int*)>:
+  401ab0:	31 c0                	xor    %eax,%eax
+  401ab2:	0f 1f 40 00          	nopl   0x0(%rax)
+  401ab6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401abd:	00 00 00 
+  401ac0:	f3 48 0f b8 17       	popcnt (%rdi),%rdx
+  401ac5:	48 83 c7 08          	add    $0x8,%rdi
+  401ac9:	48 01 d0             	add    %rdx,%rax
+  401acc:	48 39 f7             	cmp    %rsi,%rdi
+  401acf:	75 ef                	jne    401ac0 <popcount20(unsigned int*, unsigned int*)+0x10>
+  401ad1:	c3                   	retq   
+  401ad2:	0f 1f 40 00          	nopl   0x0(%rax)
+  401ad6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401add:	00 00 00 
+
+0000000000401ae0 <popcount14(unsigned int*, unsigned int*)>:
+  401ae0:	31 c0                	xor    %eax,%eax
+  401ae2:	48 39 f7             	cmp    %rsi,%rdi
+  401ae5:	74 29                	je     401b10 <popcount14(unsigned int*, unsigned int*)+0x30>
+  401ae7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  401aee:	00 00 
+  401af0:	48 83 c7 04          	add    $0x4,%rdi
+  401af4:	f3 0f b8 57 fc       	popcnt -0x4(%rdi),%edx
+  401af9:	01 d0                	add    %edx,%eax
+  401afb:	48 39 fe             	cmp    %rdi,%rsi
+  401afe:	75 f0                	jne    401af0 <popcount14(unsigned int*, unsigned int*)+0x10>
+  401b00:	c3                   	retq   
+  401b01:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401b06:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401b0d:	00 00 00 
+  401b10:	c3                   	retq   
+  401b11:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401b16:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401b1d:	00 00 00 
+
+0000000000401b20 <popcount15(unsigned int*, unsigned int*)>:
+  401b20:	31 c0                	xor    %eax,%eax
+  401b22:	48 39 f7             	cmp    %rsi,%rdi
+  401b25:	74 29                	je     401b50 <popcount15(unsigned int*, unsigned int*)+0x30>
+  401b27:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  401b2e:	00 00 
+  401b30:	48 83 c7 04          	add    $0x4,%rdi
+  401b34:	8b 57 fc             	mov    -0x4(%rdi),%edx
+  401b37:	f3 48 0f b8 d2       	popcnt %rdx,%rdx
+  401b3c:	01 d0                	add    %edx,%eax
+  401b3e:	48 39 fe             	cmp    %rdi,%rsi
+  401b41:	75 ed                	jne    401b30 <popcount15(unsigned int*, unsigned int*)+0x10>
+  401b43:	c3                   	retq   
+  401b44:	66 90                	xchg   %ax,%ax
+  401b46:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401b4d:	00 00 00 
+  401b50:	c3                   	retq   
+  401b51:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  401b56:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401b5d:	00 00 00 
+
+0000000000401b60 <popcount16(unsigned int*, unsigned int*)>:
+  401b60:	48 8d 8f 00 00 04 00 	lea    0x40000(%rdi),%rcx
+  401b67:	31 c0                	xor    %eax,%eax
+  401b69:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+  401b70:	f3 48 0f b8 17       	popcnt (%rdi),%rdx
+  401b75:	48 83 c7 08          	add    $0x8,%rdi
+  401b79:	48 01 d0             	add    %rdx,%rax
+  401b7c:	48 39 f9             	cmp    %rdi,%rcx
+  401b7f:	75 ef                	jne    401b70 <popcount16(unsigned int*, unsigned int*)+0x10>
+  401b81:	c3                   	retq   
+  401b82:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401b89:	00 00 00 
+  401b8c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000401b90 <std::ctype<char>::do_widen(char) const>:
+  401b90:	89 f0                	mov    %esi,%eax
+  401b92:	c3                   	retq   
+  401b93:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401b9a:	00 00 00 
+  401b9d:	0f 1f 00             	nopl   (%rax)
+
+0000000000401ba0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)>:
+  401ba0:	41 57                	push   %r15
+  401ba2:	41 56                	push   %r14
+  401ba4:	41 55                	push   %r13
+  401ba6:	41 54                	push   %r12
+  401ba8:	49 c7 c5 ff ff ff ff 	mov    $0xffffffffffffffff,%r13
+  401baf:	49 89 fc             	mov    %rdi,%r12
+  401bb2:	55                   	push   %rbp
+  401bb3:	53                   	push   %rbx
+  401bb4:	bf e8 03 00 00       	mov    $0x3e8,%edi
+  401bb9:	48 83 ec 28          	sub    $0x28,%rsp
+  401bbd:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  401bc4:	00 00 
+  401bc6:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+  401bcb:	31 c0                	xor    %eax,%eax
+  401bcd:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+  401bd2:	0f 1f 40 00          	nopl   0x0(%rax)
+  401bd6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401bdd:	00 00 00 
+  401be0:	0f 01 f9             	rdtscp 
+  401be3:	48 89 c6             	mov    %rax,%rsi
+  401be6:	48 c1 e2 20          	shl    $0x20,%rdx
+  401bea:	48 09 d6             	or     %rdx,%rsi
+  401bed:	0f 01 f9             	rdtscp 
+  401bf0:	48 c1 e2 20          	shl    $0x20,%rdx
+  401bf4:	48 09 d0             	or     %rdx,%rax
+  401bf7:	48 89 f2             	mov    %rsi,%rdx
+  401bfa:	48 39 f0             	cmp    %rsi,%rax
+  401bfd:	48 0f 43 d0          	cmovae %rax,%rdx
+  401c01:	48 0f 47 c6          	cmova  %rsi,%rax
+  401c05:	48 29 c2             	sub    %rax,%rdx
+  401c08:	49 39 d5             	cmp    %rdx,%r13
+  401c0b:	4c 0f 47 ea          	cmova  %rdx,%r13
+  401c0f:	ff cf                	dec    %edi
+  401c11:	75 cd                	jne    401be0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x40>
+  401c13:	bd e8 03 00 00       	mov    $0x3e8,%ebp
+  401c18:	49 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%r14
+  401c1f:	90                   	nop
+  401c20:	0f 01 f9             	rdtscp 
+  401c23:	be c0 32 65 00       	mov    $0x6532c0,%esi
+  401c28:	bf c0 32 61 00       	mov    $0x6132c0,%edi
+  401c2d:	48 c1 e2 20          	shl    $0x20,%rdx
+  401c31:	48 89 c3             	mov    %rax,%rbx
+  401c34:	89 4c 24 14          	mov    %ecx,0x14(%rsp)
+  401c38:	48 09 d3             	or     %rdx,%rbx
+  401c3b:	41 ff d4             	callq  *%r12
+  401c3e:	0f 01 f9             	rdtscp 
+  401c41:	48 c1 e2 20          	shl    $0x20,%rdx
+  401c45:	89 4c 24 14          	mov    %ecx,0x14(%rsp)
+  401c49:	48 09 d0             	or     %rdx,%rax
+  401c4c:	48 89 da             	mov    %rbx,%rdx
+  401c4f:	48 39 d8             	cmp    %rbx,%rax
+  401c52:	48 0f 43 d0          	cmovae %rax,%rdx
+  401c56:	48 0f 47 c3          	cmova  %rbx,%rax
+  401c5a:	48 29 c2             	sub    %rax,%rdx
+  401c5d:	49 39 d6             	cmp    %rdx,%r14
+  401c60:	4c 0f 47 f2          	cmova  %rdx,%r14
+  401c64:	ff cd                	dec    %ebp
+  401c66:	75 b8                	jne    401c20 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x80>
+  401c68:	4d 29 ee             	sub    %r13,%r14
+  401c6b:	bd e8 03 00 00       	mov    $0x3e8,%ebp
+  401c70:	48 bb ff ff ff ff ff 	movabs $0x7fffffffffffffff,%rbx
+  401c77:	ff ff 7f 
+  401c7a:	4c 89 34 24          	mov    %r14,(%rsp)
+  401c7e:	66 90                	xchg   %ax,%ax
+  401c80:	e8 2b ed ff ff       	callq  4009b0 <std::chrono::_V2::system_clock::now()@plt>
+  401c85:	49 89 c5             	mov    %rax,%r13
+  401c88:	e8 23 ed ff ff       	callq  4009b0 <std::chrono::_V2::system_clock::now()@plt>
+  401c8d:	4c 29 e8             	sub    %r13,%rax
+  401c90:	48 39 c3             	cmp    %rax,%rbx
+  401c93:	48 0f 4f d8          	cmovg  %rax,%rbx
+  401c97:	ff cd                	dec    %ebp
+  401c99:	75 e5                	jne    401c80 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0xe0>
+  401c9b:	bd e8 03 00 00       	mov    $0x3e8,%ebp
+  401ca0:	49 bf ff ff ff ff ff 	movabs $0x7fffffffffffffff,%r15
+  401ca7:	ff ff 7f 
+  401caa:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+  401cb0:	e8 fb ec ff ff       	callq  4009b0 <std::chrono::_V2::system_clock::now()@plt>
+  401cb5:	be c0 32 65 00       	mov    $0x6532c0,%esi
+  401cba:	bf c0 32 61 00       	mov    $0x6132c0,%edi
+  401cbf:	49 89 c5             	mov    %rax,%r13
+  401cc2:	41 ff d4             	callq  *%r12
+  401cc5:	41 89 c6             	mov    %eax,%r14d
+  401cc8:	e8 e3 ec ff ff       	callq  4009b0 <std::chrono::_V2::system_clock::now()@plt>
+  401ccd:	4c 29 e8             	sub    %r13,%rax
+  401cd0:	49 39 c7             	cmp    %rax,%r15
+  401cd3:	4c 0f 4f f8          	cmovg  %rax,%r15
+  401cd7:	ff cd                	dec    %ebp
+  401cd9:	75 d5                	jne    401cb0 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x110>
+  401cdb:	ba 01 00 00 00       	mov    $0x1,%edx
+  401ce0:	48 8d 74 24 12       	lea    0x12(%rsp),%rsi
+  401ce5:	bf a0 30 60 00       	mov    $0x6030a0,%edi
+  401cea:	c6 44 24 12 22       	movb   $0x22,0x12(%rsp)
+  401cef:	e8 2c ed ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  401cf4:	49 29 df             	sub    %rbx,%r15
+  401cf7:	48 89 c5             	mov    %rax,%rbp
+  401cfa:	48 8b 00             	mov    (%rax),%rax
+  401cfd:	48 83 7c 24 08 00    	cmpq   $0x0,0x8(%rsp)
+  401d03:	4c 89 fb             	mov    %r15,%rbx
+  401d06:	48 8b 50 e8          	mov    -0x18(%rax),%rdx
+  401d0a:	48 c7 44 15 10 16 00 	movq   $0x16,0x10(%rbp,%rdx,1)
+  401d11:	00 00 
+  401d13:	0f 84 ad 01 00 00    	je     401ec6 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x326>
+  401d19:	4c 8b 7c 24 08       	mov    0x8(%rsp),%r15
+  401d1e:	4c 89 ff             	mov    %r15,%rdi
+  401d21:	e8 9a ec ff ff       	callq  4009c0 <strlen@plt>
+  401d26:	4c 89 fe             	mov    %r15,%rsi
+  401d29:	48 89 ef             	mov    %rbp,%rdi
+  401d2c:	48 89 c2             	mov    %rax,%rdx
+  401d2f:	e8 ec ec ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  401d34:	ba 01 00 00 00       	mov    $0x1,%edx
+  401d39:	48 8d 74 24 13       	lea    0x13(%rsp),%rsi
+  401d3e:	48 89 ef             	mov    %rbp,%rdi
+  401d41:	c6 44 24 13 22       	movb   $0x22,0x13(%rsp)
+  401d46:	e8 d5 ec ff ff       	callq  400a20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+  401d4b:	44 89 f6             	mov    %r14d,%esi
+  401d4e:	48 8b 10             	mov    (%rax),%rdx
+  401d51:	48 89 c7             	mov    %rax,%rdi
+  401d54:	48 8b 52 e8          	mov    -0x18(%rdx),%rdx
+  401d58:	48 c7 44 10 10 0c 00 	movq   $0xc,0x10(%rax,%rdx,1)
+  401d5f:	00 00 
+  401d61:	e8 7a ec ff ff       	callq  4009e0 <std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)@plt>
+  401d66:	48 8b 10             	mov    (%rax),%rdx
+  401d69:	48 8b 4a e8          	mov    -0x18(%rdx),%rcx
+  401d6d:	48 c7 44 08 10 0c 00 	movq   $0xc,0x10(%rax,%rcx,1)
+  401d74:	00 00 
+  401d76:	48 8b 4a e8          	mov    -0x18(%rdx),%rcx
+  401d7a:	48 01 c1             	add    %rax,%rcx
+  401d7d:	8b 51 18             	mov    0x18(%rcx),%edx
+  401d80:	48 c7 41 08 02 00 00 	movq   $0x2,0x8(%rcx)
+  401d87:	00 
+  401d88:	81 e2 fb fe ff ff    	and    $0xfffffefb,%edx
+  401d8e:	83 ca 04             	or     $0x4,%edx
+  401d91:	48 83 3c 24 00       	cmpq   $0x0,(%rsp)
+  401d96:	89 51 18             	mov    %edx,0x18(%rcx)
+  401d99:	0f 88 05 01 00 00    	js     401ea4 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x304>
+  401d9f:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+  401da3:	c4 e1 fb 2a 04 24    	vcvtsi2sdq (%rsp),%xmm0,%xmm0
+  401da9:	c5 fb 59 05 4f 07 00 	vmulsd 0x74f(%rip),%xmm0,%xmm0        # 402500 <_IO_stdin_used+0x250>
+  401db0:	00 
+  401db1:	48 89 c7             	mov    %rax,%rdi
+  401db4:	e8 a7 ec ff ff       	callq  400a60 <std::ostream& std::ostream::_M_insert<double>(double)@plt>
+  401db9:	c5 f0 57 c9          	vxorps %xmm1,%xmm1,%xmm1
+  401dbd:	48 8b 10             	mov    (%rax),%rdx
+  401dc0:	c4 e1 f3 2a cb       	vcvtsi2sd %rbx,%xmm1,%xmm1
+  401dc5:	c5 f3 59 05 33 07 00 	vmulsd 0x733(%rip),%xmm1,%xmm0        # 402500 <_IO_stdin_used+0x250>
+  401dcc:	00 
+  401dcd:	48 89 c7             	mov    %rax,%rdi
+  401dd0:	c5 fb 11 0c 24       	vmovsd %xmm1,(%rsp)
+  401dd5:	48 8b 4a e8          	mov    -0x18(%rdx),%rcx
+  401dd9:	48 c7 44 08 10 0c 00 	movq   $0xc,0x10(%rax,%rcx,1)
+  401de0:	00 00 
+  401de2:	48 8b 4a e8          	mov    -0x18(%rdx),%rcx
+  401de6:	48 01 c1             	add    %rax,%rcx
+  401de9:	8b 51 18             	mov    0x18(%rcx),%edx
+  401dec:	48 c7 41 08 02 00 00 	movq   $0x2,0x8(%rcx)
+  401df3:	00 
+  401df4:	81 e2 fb fe ff ff    	and    $0xfffffefb,%edx
+  401dfa:	83 ca 04             	or     $0x4,%edx
+  401dfd:	89 51 18             	mov    %edx,0x18(%rcx)
+  401e00:	e8 5b ec ff ff       	callq  400a60 <std::ostream& std::ostream::_M_insert<double>(double)@plt>
+  401e05:	c5 fb 10 0c 24       	vmovsd (%rsp),%xmm1
+  401e0a:	48 8b 10             	mov    (%rax),%rdx
+  401e0d:	48 89 c7             	mov    %rax,%rdi
+  401e10:	48 8b 52 e8          	mov    -0x18(%rdx),%rdx
+  401e14:	c5 f3 5e 05 ec 06 00 	vdivsd 0x6ec(%rip),%xmm1,%xmm0        # 402508 <_IO_stdin_used+0x258>
+  401e1b:	00 
+  401e1c:	48 c7 44 10 10 0c 00 	movq   $0xc,0x10(%rax,%rdx,1)
+  401e23:	00 00 
+  401e25:	e8 36 ec ff ff       	callq  400a60 <std::ostream& std::ostream::_M_insert<double>(double)@plt>
+  401e2a:	48 89 c5             	mov    %rax,%rbp
+  401e2d:	48 8b 00             	mov    (%rax),%rax
+  401e30:	48 8b 40 e8          	mov    -0x18(%rax),%rax
+  401e34:	48 8b 9c 05 f0 00 00 	mov    0xf0(%rbp,%rax,1),%rbx
+  401e3b:	00 
+  401e3c:	48 85 db             	test   %rbx,%rbx
+  401e3f:	0f 84 9d 00 00 00    	je     401ee2 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x342>
+  401e45:	80 7b 38 00          	cmpb   $0x0,0x38(%rbx)
+  401e49:	74 33                	je     401e7e <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x2de>
+  401e4b:	0f be 73 43          	movsbl 0x43(%rbx),%esi
+  401e4f:	48 89 ef             	mov    %rbp,%rdi
+  401e52:	e8 49 eb ff ff       	callq  4009a0 <std::ostream::put(char)@plt>
+  401e57:	48 89 c7             	mov    %rax,%rdi
+  401e5a:	e8 91 eb ff ff       	callq  4009f0 <std::ostream::flush()@plt>
+  401e5f:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+  401e64:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+  401e6b:	00 00 
+  401e6d:	75 6e                	jne    401edd <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x33d>
+  401e6f:	48 83 c4 28          	add    $0x28,%rsp
+  401e73:	5b                   	pop    %rbx
+  401e74:	5d                   	pop    %rbp
+  401e75:	41 5c                	pop    %r12
+  401e77:	41 5d                	pop    %r13
+  401e79:	41 5e                	pop    %r14
+  401e7b:	41 5f                	pop    %r15
+  401e7d:	c3                   	retq   
+  401e7e:	48 89 df             	mov    %rbx,%rdi
+  401e81:	e8 aa eb ff ff       	callq  400a30 <std::ctype<char>::_M_widen_init() const@plt>
+  401e86:	48 8b 03             	mov    (%rbx),%rax
+  401e89:	be 0a 00 00 00       	mov    $0xa,%esi
+  401e8e:	48 8b 40 30          	mov    0x30(%rax),%rax
+  401e92:	48 3d 90 1b 40 00    	cmp    $0x401b90,%rax
+  401e98:	74 b5                	je     401e4f <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x2af>
+  401e9a:	48 89 df             	mov    %rbx,%rdi
+  401e9d:	ff d0                	callq  *%rax
+  401e9f:	0f be f0             	movsbl %al,%esi
+  401ea2:	eb ab                	jmp    401e4f <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x2af>
+  401ea4:	48 8b 3c 24          	mov    (%rsp),%rdi
+  401ea8:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+  401eac:	48 89 fa             	mov    %rdi,%rdx
+  401eaf:	83 e7 01             	and    $0x1,%edi
+  401eb2:	48 d1 ea             	shr    %rdx
+  401eb5:	48 09 fa             	or     %rdi,%rdx
+  401eb8:	c4 e1 fb 2a c2       	vcvtsi2sd %rdx,%xmm0,%xmm0
+  401ebd:	c5 fb 58 c0          	vaddsd %xmm0,%xmm0,%xmm0
+  401ec1:	e9 e3 fe ff ff       	jmpq   401da9 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x209>
+  401ec6:	48 8b 78 e8          	mov    -0x18(%rax),%rdi
+  401eca:	48 01 ef             	add    %rbp,%rdi
+  401ecd:	8b 77 20             	mov    0x20(%rdi),%esi
+  401ed0:	83 ce 01             	or     $0x1,%esi
+  401ed3:	e8 98 eb ff ff       	callq  400a70 <std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)@plt>
+  401ed8:	e9 57 fe ff ff       	jmpq   401d34 <void test<unsigned int (unsigned int*, unsigned int*)>(unsigned int (&)(unsigned int*, unsigned int*), char const*)+0x194>
+  401edd:	e8 2e eb ff ff       	callq  400a10 <__stack_chk_fail@plt>
+  401ee2:	e8 59 eb ff ff       	callq  400a40 <std::__throw_bad_cast()@plt>
+  401ee7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  401eee:	00 00 
+
+0000000000401ef0 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)>:
+  401ef0:	41 57                	push   %r15
+  401ef2:	41 56                	push   %r14
+  401ef4:	41 55                	push   %r13
+  401ef6:	41 54                	push   %r12
+  401ef8:	55                   	push   %rbp
+  401ef9:	53                   	push   %rbx
+  401efa:	8b 02                	mov    (%rdx),%eax
+  401efc:	8b 7a 04             	mov    0x4(%rdx),%edi
+  401eff:	48 8b 0e             	mov    (%rsi),%rcx
+  401f02:	48 29 c7             	sub    %rax,%rdi
+  401f05:	49 89 c0             	mov    %rax,%r8
+  401f08:	48 81 ff fc ff ff 7f 	cmp    $0x7ffffffc,%rdi
+  401f0f:	77 6f                	ja     401f80 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x90>
+  401f11:	48 ff c7             	inc    %rdi
+  401f14:	b8 fd ff ff 7f       	mov    $0x7ffffffd,%eax
+  401f19:	31 d2                	xor    %edx,%edx
+  401f1b:	49 bb 05 00 00 00 02 	movabs $0x200000005,%r11
+  401f22:	00 00 00 
+  401f25:	48 f7 f7             	div    %rdi
+  401f28:	48 0f af f8          	imul   %rax,%rdi
+  401f2c:	48 89 c3             	mov    %rax,%rbx
+  401f2f:	90                   	nop
+  401f30:	4c 69 d1 a7 41 00 00 	imul   $0x41a7,%rcx,%r10
+  401f37:	4c 89 d0             	mov    %r10,%rax
+  401f3a:	4c 89 d1             	mov    %r10,%rcx
+  401f3d:	49 f7 e3             	mul    %r11
+  401f40:	48 29 d1             	sub    %rdx,%rcx
+  401f43:	48 d1 e9             	shr    %rcx
+  401f46:	48 01 ca             	add    %rcx,%rdx
+  401f49:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  401f4d:	49 89 d1             	mov    %rdx,%r9
+  401f50:	49 c1 e1 1f          	shl    $0x1f,%r9
+  401f54:	49 29 d1             	sub    %rdx,%r9
+  401f57:	4d 29 ca             	sub    %r9,%r10
+  401f5a:	49 8d 42 ff          	lea    -0x1(%r10),%rax
+  401f5e:	4c 89 d1             	mov    %r10,%rcx
+  401f61:	48 39 c7             	cmp    %rax,%rdi
+  401f64:	76 ca                	jbe    401f30 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x40>
+  401f66:	31 d2                	xor    %edx,%edx
+  401f68:	4c 89 16             	mov    %r10,(%rsi)
+  401f6b:	48 f7 f3             	div    %rbx
+  401f6e:	5b                   	pop    %rbx
+  401f6f:	44 01 c0             	add    %r8d,%eax
+  401f72:	5d                   	pop    %rbp
+  401f73:	41 5c                	pop    %r12
+  401f75:	41 5d                	pop    %r13
+  401f77:	41 5e                	pop    %r14
+  401f79:	41 5f                	pop    %r15
+  401f7b:	c3                   	retq   
+  401f7c:	0f 1f 40 00          	nopl   0x0(%rax)
+  401f80:	48 81 ff fd ff ff 7f 	cmp    $0x7ffffffd,%rdi
+  401f87:	75 57                	jne    401fe0 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0xf0>
+  401f89:	48 69 c9 a7 41 00 00 	imul   $0x41a7,%rcx,%rcx
+  401f90:	48 ba 05 00 00 00 02 	movabs $0x200000005,%rdx
+  401f97:	00 00 00 
+  401f9a:	5b                   	pop    %rbx
+  401f9b:	5d                   	pop    %rbp
+  401f9c:	41 5c                	pop    %r12
+  401f9e:	41 5d                	pop    %r13
+  401fa0:	41 5e                	pop    %r14
+  401fa2:	41 5f                	pop    %r15
+  401fa4:	48 89 c8             	mov    %rcx,%rax
+  401fa7:	48 f7 e2             	mul    %rdx
+  401faa:	48 89 c8             	mov    %rcx,%rax
+  401fad:	48 29 d0             	sub    %rdx,%rax
+  401fb0:	48 d1 e8             	shr    %rax
+  401fb3:	48 01 c2             	add    %rax,%rdx
+  401fb6:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  401fba:	48 89 d0             	mov    %rdx,%rax
+  401fbd:	48 c1 e0 1f          	shl    $0x1f,%rax
+  401fc1:	48 29 d0             	sub    %rdx,%rax
+  401fc4:	48 89 ca             	mov    %rcx,%rdx
+  401fc7:	48 29 c2             	sub    %rax,%rdx
+  401fca:	48 8d 42 ff          	lea    -0x1(%rdx),%rax
+  401fce:	48 89 16             	mov    %rdx,(%rsi)
+  401fd1:	44 01 c0             	add    %r8d,%eax
+  401fd4:	c3                   	retq   
+  401fd5:	90                   	nop
+  401fd6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  401fdd:	00 00 00 
+  401fe0:	49 89 fb             	mov    %rdi,%r11
+  401fe3:	49 b9 09 00 00 00 02 	movabs $0x8000000200000009,%r9
+  401fea:	00 00 80 
+  401fed:	41 bd fd ff ff 7f    	mov    $0x7ffffffd,%r13d
+  401ff3:	49 d1 eb             	shr    %r11
+  401ff6:	4c 89 d8             	mov    %r11,%rax
+  401ff9:	49 f7 e1             	mul    %r9
+  401ffc:	48 c1 ea 1d          	shr    $0x1d,%rdx
+  402000:	41 89 d3             	mov    %edx,%r11d
+  402003:	41 89 d6             	mov    %edx,%r14d
+  402006:	4c 89 da             	mov    %r11,%rdx
+  402009:	49 8d 6b 01          	lea    0x1(%r11),%rbp
+  40200d:	48 d1 ea             	shr    %rdx
+  402010:	48 89 d0             	mov    %rdx,%rax
+  402013:	49 f7 e1             	mul    %r9
+  402016:	49 b9 05 00 00 00 02 	movabs $0x200000005,%r9
+  40201d:	00 00 00 
+  402020:	48 c1 ea 1d          	shr    $0x1d,%rdx
+  402024:	48 8d 42 01          	lea    0x1(%rdx),%rax
+  402028:	48 89 44 24 f8       	mov    %rax,-0x8(%rsp)
+  40202d:	41 81 fe fc ff ff 7f 	cmp    $0x7ffffffc,%r14d
+  402034:	0f 87 c2 00 00 00    	ja     4020fc <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x20c>
+  40203a:	4c 89 e8             	mov    %r13,%rax
+  40203d:	31 d2                	xor    %edx,%edx
+  40203f:	48 89 eb             	mov    %rbp,%rbx
+  402042:	48 f7 f5             	div    %rbp
+  402045:	48 0f af d8          	imul   %rax,%rbx
+  402049:	49 89 c4             	mov    %rax,%r12
+  40204c:	0f 1f 40 00          	nopl   0x0(%rax)
+  402050:	4c 69 d1 a7 41 00 00 	imul   $0x41a7,%rcx,%r10
+  402057:	4c 89 d0             	mov    %r10,%rax
+  40205a:	4c 89 d1             	mov    %r10,%rcx
+  40205d:	49 f7 e1             	mul    %r9
+  402060:	48 29 d1             	sub    %rdx,%rcx
+  402063:	48 d1 e9             	shr    %rcx
+  402066:	48 01 ca             	add    %rcx,%rdx
+  402069:	4c 89 d1             	mov    %r10,%rcx
+  40206c:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  402070:	48 89 d0             	mov    %rdx,%rax
+  402073:	48 c1 e0 1f          	shl    $0x1f,%rax
+  402077:	48 29 d0             	sub    %rdx,%rax
+  40207a:	48 29 c1             	sub    %rax,%rcx
+  40207d:	4c 8d 51 ff          	lea    -0x1(%rcx),%r10
+  402081:	4c 39 d3             	cmp    %r10,%rbx
+  402084:	76 ca                	jbe    402050 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x160>
+  402086:	48 69 d9 a7 41 00 00 	imul   $0x41a7,%rcx,%rbx
+  40208d:	48 89 d8             	mov    %rbx,%rax
+  402090:	48 89 d9             	mov    %rbx,%rcx
+  402093:	49 f7 e1             	mul    %r9
+  402096:	48 29 d1             	sub    %rdx,%rcx
+  402099:	48 d1 e9             	shr    %rcx
+  40209c:	48 01 ca             	add    %rcx,%rdx
+  40209f:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  4020a3:	48 89 d0             	mov    %rdx,%rax
+  4020a6:	48 c1 e0 1f          	shl    $0x1f,%rax
+  4020aa:	48 29 d0             	sub    %rdx,%rax
+  4020ad:	31 d2                	xor    %edx,%edx
+  4020af:	48 29 c3             	sub    %rax,%rbx
+  4020b2:	4c 89 d0             	mov    %r10,%rax
+  4020b5:	49 f7 f4             	div    %r12
+  4020b8:	48 89 d9             	mov    %rbx,%rcx
+  4020bb:	48 8d 5b ff          	lea    -0x1(%rbx),%rbx
+  4020bf:	49 89 c2             	mov    %rax,%r10
+  4020c2:	45 89 d2             	mov    %r10d,%r10d
+  4020c5:	31 d2                	xor    %edx,%edx
+  4020c7:	48 89 0e             	mov    %rcx,(%rsi)
+  4020ca:	4c 89 d0             	mov    %r10,%rax
+  4020cd:	48 c1 e0 1e          	shl    $0x1e,%rax
+  4020d1:	4c 29 d0             	sub    %r10,%rax
+  4020d4:	48 01 c0             	add    %rax,%rax
+  4020d7:	48 01 d8             	add    %rbx,%rax
+  4020da:	0f 92 c2             	setb   %dl
+  4020dd:	48 39 c7             	cmp    %rax,%rdi
+  4020e0:	0f 82 47 ff ff ff    	jb     40202d <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x13d>
+  4020e6:	48 85 d2             	test   %rdx,%rdx
+  4020e9:	0f 84 7f fe ff ff    	je     401f6e <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x7e>
+  4020ef:	41 81 fe fc ff ff 7f 	cmp    $0x7ffffffc,%r14d
+  4020f6:	0f 86 3e ff ff ff    	jbe    40203a <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x14a>
+  4020fc:	49 81 fb fd ff ff 7f 	cmp    $0x7ffffffd,%r11
+  402103:	75 6b                	jne    402170 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x280>
+  402105:	48 69 c9 a7 41 00 00 	imul   $0x41a7,%rcx,%rcx
+  40210c:	48 89 c8             	mov    %rcx,%rax
+  40210f:	49 f7 e1             	mul    %r9
+  402112:	48 89 c8             	mov    %rcx,%rax
+  402115:	48 29 d0             	sub    %rdx,%rax
+  402118:	48 d1 e8             	shr    %rax
+  40211b:	48 01 d0             	add    %rdx,%rax
+  40211e:	48 c1 e8 1e          	shr    $0x1e,%rax
+  402122:	48 89 c2             	mov    %rax,%rdx
+  402125:	48 c1 e2 1f          	shl    $0x1f,%rdx
+  402129:	48 29 c2             	sub    %rax,%rdx
+  40212c:	48 29 d1             	sub    %rdx,%rcx
+  40212f:	48 69 d9 a7 41 00 00 	imul   $0x41a7,%rcx,%rbx
+  402136:	4c 8d 51 ff          	lea    -0x1(%rcx),%r10
+  40213a:	48 89 d8             	mov    %rbx,%rax
+  40213d:	48 89 d9             	mov    %rbx,%rcx
+  402140:	49 f7 e1             	mul    %r9
+  402143:	48 29 d1             	sub    %rdx,%rcx
+  402146:	48 d1 e9             	shr    %rcx
+  402149:	48 01 ca             	add    %rcx,%rdx
+  40214c:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  402150:	48 89 d0             	mov    %rdx,%rax
+  402153:	48 c1 e0 1f          	shl    $0x1f,%rax
+  402157:	48 29 d0             	sub    %rdx,%rax
+  40215a:	48 29 c3             	sub    %rax,%rbx
+  40215d:	48 89 d9             	mov    %rbx,%rcx
+  402160:	48 8d 5b ff          	lea    -0x1(%rbx),%rbx
+  402164:	e9 59 ff ff ff       	jmpq   4020c2 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x1d2>
+  402169:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+  402170:	48 8b 5c 24 f8       	mov    -0x8(%rsp),%rbx
+  402175:	4c 89 e8             	mov    %r13,%rax
+  402178:	31 d2                	xor    %edx,%edx
+  40217a:	48 f7 f3             	div    %rbx
+  40217d:	48 0f af d8          	imul   %rax,%rbx
+  402181:	49 89 c7             	mov    %rax,%r15
+  402184:	49 89 dc             	mov    %rbx,%r12
+  402187:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40218e:	00 00 
+  402190:	4c 69 d1 a7 41 00 00 	imul   $0x41a7,%rcx,%r10
+  402197:	4c 89 d0             	mov    %r10,%rax
+  40219a:	4c 89 d1             	mov    %r10,%rcx
+  40219d:	49 f7 e1             	mul    %r9
+  4021a0:	48 29 d1             	sub    %rdx,%rcx
+  4021a3:	48 d1 e9             	shr    %rcx
+  4021a6:	48 01 ca             	add    %rcx,%rdx
+  4021a9:	4c 89 d1             	mov    %r10,%rcx
+  4021ac:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  4021b0:	48 89 d0             	mov    %rdx,%rax
+  4021b3:	48 c1 e0 1f          	shl    $0x1f,%rax
+  4021b7:	48 29 d0             	sub    %rdx,%rax
+  4021ba:	48 29 c1             	sub    %rax,%rcx
+  4021bd:	48 8d 41 ff          	lea    -0x1(%rcx),%rax
+  4021c1:	49 39 c4             	cmp    %rax,%r12
+  4021c4:	76 ca                	jbe    402190 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x2a0>
+  4021c6:	31 d2                	xor    %edx,%edx
+  4021c8:	4c 69 d1 a7 41 00 00 	imul   $0x41a7,%rcx,%r10
+  4021cf:	49 f7 f7             	div    %r15
+  4021d2:	4c 89 d1             	mov    %r10,%rcx
+  4021d5:	48 89 c3             	mov    %rax,%rbx
+  4021d8:	48 c1 e3 1e          	shl    $0x1e,%rbx
+  4021dc:	48 29 c3             	sub    %rax,%rbx
+  4021df:	4c 89 d0             	mov    %r10,%rax
+  4021e2:	49 f7 e1             	mul    %r9
+  4021e5:	48 01 db             	add    %rbx,%rbx
+  4021e8:	48 29 d1             	sub    %rdx,%rcx
+  4021eb:	48 d1 e9             	shr    %rcx
+  4021ee:	48 01 ca             	add    %rcx,%rdx
+  4021f1:	4c 89 d1             	mov    %r10,%rcx
+  4021f4:	48 c1 ea 1e          	shr    $0x1e,%rdx
+  4021f8:	48 89 d0             	mov    %rdx,%rax
+  4021fb:	48 c1 e0 1f          	shl    $0x1f,%rax
+  4021ff:	48 29 d0             	sub    %rdx,%rax
+  402202:	48 29 c1             	sub    %rax,%rcx
+  402205:	4c 8d 54 19 ff       	lea    -0x1(%rcx,%rbx,1),%r10
+  40220a:	48 89 0e             	mov    %rcx,(%rsi)
+  40220d:	4d 39 da             	cmp    %r11,%r10
+  402210:	0f 87 7a ff ff ff    	ja     402190 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x2a0>
+  402216:	4c 39 d3             	cmp    %r10,%rbx
+  402219:	0f 87 71 ff ff ff    	ja     402190 <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x2a0>
+  40221f:	48 69 d9 a7 41 00 00 	imul   $0x41a7,%rcx,%rbx
+  402226:	e9 0f ff ff ff       	jmpq   40213a <unsigned int std::uniform_int_distribution<unsigned int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<unsigned int>::param_type const&)+0x24a>
+  40222b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000402230 <__libc_csu_init>:
+  402230:	41 57                	push   %r15
+  402232:	41 56                	push   %r14
+  402234:	49 89 d7             	mov    %rdx,%r15
+  402237:	41 55                	push   %r13
+  402239:	41 54                	push   %r12
+  40223b:	4c 8d 25 b6 0b 20 00 	lea    0x200bb6(%rip),%r12        # 602df8 <__frame_dummy_init_array_entry>
+  402242:	55                   	push   %rbp
+  402243:	48 8d 2d be 0b 20 00 	lea    0x200bbe(%rip),%rbp        # 602e08 <__init_array_end>
+  40224a:	53                   	push   %rbx
+  40224b:	41 89 fd             	mov    %edi,%r13d
+  40224e:	49 89 f6             	mov    %rsi,%r14
+  402251:	4c 29 e5             	sub    %r12,%rbp
+  402254:	48 83 ec 08          	sub    $0x8,%rsp
+  402258:	48 c1 fd 03          	sar    $0x3,%rbp
+  40225c:	e8 17 e7 ff ff       	callq  400978 <_init>
+  402261:	48 85 ed             	test   %rbp,%rbp
+  402264:	74 20                	je     402286 <__libc_csu_init+0x56>
+  402266:	31 db                	xor    %ebx,%ebx
+  402268:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  40226f:	00 
+  402270:	4c 89 fa             	mov    %r15,%rdx
+  402273:	4c 89 f6             	mov    %r14,%rsi
+  402276:	44 89 ef             	mov    %r13d,%edi
+  402279:	41 ff 14 dc          	callq  *(%r12,%rbx,8)
+  40227d:	48 83 c3 01          	add    $0x1,%rbx
+  402281:	48 39 dd             	cmp    %rbx,%rbp
+  402284:	75 ea                	jne    402270 <__libc_csu_init+0x40>
+  402286:	48 83 c4 08          	add    $0x8,%rsp
+  40228a:	5b                   	pop    %rbx
+  40228b:	5d                   	pop    %rbp
+  40228c:	41 5c                	pop    %r12
+  40228e:	41 5d                	pop    %r13
+  402290:	41 5e                	pop    %r14
+  402292:	41 5f                	pop    %r15
+  402294:	c3                   	retq   
+  402295:	90                   	nop
+  402296:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40229d:	00 00 00 
+
+00000000004022a0 <__libc_csu_fini>:
+  4022a0:	f3 c3                	repz retq 
+
+Desensamblado de la sección .fini:
+
+00000000004022a4 <_fini>:
+  4022a4:	48 83 ec 08          	sub    $0x8,%rsp
+  4022a8:	48 83 c4 08          	add    $0x8,%rsp
+  4022ac:	c3                   	retq   

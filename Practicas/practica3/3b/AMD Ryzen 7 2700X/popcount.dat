@@ -1,0 +1,22 @@
+#               popcount       value      cycles    time(ns)   total(us)
+"     popcount00(empty)"  2765387878           0        1.38       90.54
+"       popcount01(for)"     1048045           0        2.65      173.56
+"     popcount02(while)"     1048045          37       12.83      840.75
+"    popcount03(inline)"     1048045          37        9.55      626.09
+" popcount04(inline v2)"     1048045          37       12.96      849.38
+"popcount05(0'hallaron)"     1048045           0        2.11      138.26
+"       popcount06(gus)"     1048045           0        2.11      138.23
+" popcount07(wikipedia)"     1048045           0        1.64      107.51
+"    popcount08(Wegner)"     1048045           0       13.80      904.20
+"       popcount09(lt8)"     1048045           0        1.41       92.15
+"    popcount10(lt8 v2)"     1048045           0        1.41       92.15
+"    popcount11(lt8 v3)"     1048045           0        2.58      168.95
+"    popcount12(lt8 v4)"     1048045           0        2.83      185.76
+"      popcount13(lt16)"     1048045           0        1.41       92.19
+"   popcount14(builtin)"     1048045           0        1.41       92.15
+"    popcount15(bitset)"     1048045           0        1.41       92.15
+" popcount16(recursive)"     1048045          37       13.35      874.80
+"   popcount17(lt8+ptr)"     1048045           0        1.63      106.88
+"    popcount18(popcnt)"     1048045           0        1.40       91.61
+"  popcount19(do while)"     1048045          37       13.52      886.18
+"      popcount20(O(1))"     1048045           0        1.92      125.66
